@@ -1,0 +1,184 @@
+/* Code block inner padding */
+.highlight pre code {
+  padding: 1rem !important;
+  display: block;
+}
+
+/* ── Language label ── */
+.code-block {
+  position: relative;
+}
+
+.code-block::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono, monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+  border-radius: 0 var(--radius) 0 var(--radius);
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+/* Hide language label when copy button is visible (on hover) */
+.code-block:hover::before {
+  opacity: 0;
+}
+
+.dark .code-block::before {
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body:not(.dark) .code-block::before {
+  color: rgba(45, 42, 36, 0.5);
+  background: rgba(45, 42, 36, 0.07);
+}
+
+/* ── Line numbers ── */
+.chroma .lntd {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.chroma .lntd:first-child {
+  width: auto;
+}
+
+/* Make table cells seamless — background comes from outer .highlight only */
+.chroma .lntd pre,
+.chroma .lntd pre code {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.chroma .lnt {
+  padding: 0 0.8em 0 0.4em !important;
+}
+
+body:not(.dark) .chroma .lnt {
+  color: #a09b8e !important;
+}
+
+/* Ensure line-number table has no gaps */
+.chroma .lntable {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* Line-number column padding */
+.chroma .lntd:first-child pre code {
+  padding: 1rem 0 1rem 0.5rem !important;
+}
+
+/* Code column padding */
+.chroma .lntd:last-child pre code {
+  padding: 1rem 1rem 1rem 0.5rem !important;
+}
+
+/* Light mode code blocks - warm cream theme */
+body:not(.dark) .highlight {
+  background: var(--code-block-bg) !important;
+  border: 1px solid var(--code-block-border);
+}
+
+body:not(.dark) .highlight pre,
+body:not(.dark) .highlight .chroma {
+  background: var(--code-block-bg) !important;
+  border: none;
+}
+
+body:not(.dark) .highlight code,
+body:not(.dark) pre code {
+  background: transparent !important;
+  color: var(--foreground) !important;
+}
+
+/* Syntax colors for light mode */
+body:not(.dark) .highlight .c,
+body:not(.dark) .highlight .c1,
+body:not(.dark) .highlight .cm {
+  color: #8a8577 !important;
+}
+
+body:not(.dark) .highlight .k,
+body:not(.dark) .highlight .kd,
+body:not(.dark) .highlight .kn,
+body:not(.dark) .highlight .kp,
+body:not(.dark) .highlight .kr,
+body:not(.dark) .highlight .kt {
+  color: #b8451c !important;
+}
+
+body:not(.dark) .highlight .s,
+body:not(.dark) .highlight .s1,
+body:not(.dark) .highlight .s2,
+body:not(.dark) .highlight .se,
+body:not(.dark) .highlight .sh,
+body:not(.dark) .highlight .si,
+body:not(.dark) .highlight .sx {
+  color: #4a7a3e !important;
+}
+
+body:not(.dark) .highlight .na,
+body:not(.dark) .highlight .nb,
+body:not(.dark) .highlight .nc,
+body:not(.dark) .highlight .no,
+body:not(.dark) .highlight .nd,
+body:not(.dark) .highlight .ni,
+body:not(.dark) .highlight .ne,
+body:not(.dark) .highlight .nf,
+body:not(.dark) .highlight .nl,
+body:not(.dark) .highlight .nn,
+body:not(.dark) .highlight .nt,
+body:not(.dark) .highlight .nv {
+  color: #7c3aad !important;
+}
+
+body:not(.dark) .highlight .m,
+body:not(.dark) .highlight .mi,
+body:not(.dark) .highlight .mf,
+body:not(.dark) .highlight .mh,
+body:not(.dark) .highlight .mo {
+  color: #1a6fb5 !important;
+}
+
+body:not(.dark) .highlight .o,
+body:not(.dark) .highlight .p {
+  color: #3d3a34 !important;
+}
+
+/* Inline code in light mode */
+body:not(.dark) code {
+  background: var(--secondary) !important;
+  color: var(--foreground) !important;
+  border: 1px solid var(--code-block-border);
+}
+
+/* Dark mode copy button */
+.dark .copy-code {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark .copy-code:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Light mode copy button */
+body:not(.dark) .copy-code {
+  color: rgba(45, 42, 36, 0.5);
+}
+
+body:not(.dark) .copy-code:hover {
+  color: rgba(45, 42, 36, 0.85);
+}

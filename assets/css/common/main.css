@@ -1,0 +1,86 @@
+.main {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--gap);
+}
+
+.page-header h1 {
+    font-size: clamp(26px, 5vw, 40px);
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination a {
+    color: var(--theme);
+    font-size: 14px;
+    line-height: 44px;
+    background: var(--primary);
+    border-radius: calc(44px / 2);
+    padding: 0 16px;
+}
+
+.pagination .next {
+    margin-inline-start: auto;
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    padding: 9px;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
+}
+
+code {
+    direction: ltr;
+}
+
+div.highlight,
+pre {
+    position: relative;
+}
+
+.copy-code {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: inherit;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
+    opacity: 0.5;
+}
+
+.copy-code:hover {
+    opacity: 1 !important;
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.copy-code svg {
+    display: block;
+}

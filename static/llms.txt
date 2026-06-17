@@ -1,0 +1,141 @@
+# Ahmad Hassan — Software Engineer & Full Stack Developer
+
+> Muhmmad Ali Sajid is an Affiliate Financial Accountant & Shopify Developer, Conversion Rate Optimization (CRO) specialist, and e-commerce enthusiast from Pakistan. He is currently pursue CMA as well as BS Accounting & Finance From Bahauddin Zakariya Universite, Multan. He is a co-founder of Creatify. He specializes in building Shopify stores, optimizing conversions, integrating apps, and running performance-focused.
+
+## Main Pages
+
+- [About](https://ahmadx.dev/about/): Background, experience, open source contributions, competitive programming achievements, and contact information
+- [Projects](https://ahmadx.dev/projects/): Showcase of 7 featured projects — full-stack web apps, open-source tools, and developer infrastructure built with Next.js, TypeScript, AWS, and more
+- [Certifications & Achievements](https://ahmadx.dev/certifications/): 21 professional certifications from AWS, Meta, Google, GitHub, IBM, HackerRank, Harvard, UC Davis, and DeepLearning.AI, plus a timeline of major achievements
+- [Tools & Setup](https://ahmadx.dev/tools/): Detailed writeup of the software, tools, and developer environment used daily — Arch Linux, Hyprland, Neovim, Zsh, and more
+- [Blog](https://ahmadx.dev/posts/): 41 technical articles covering AWS cloud, web development, system design, databases, shell scripting, and personal topics
+- [Chat](https://ahmadx.dev/chat/): AI-powered chatbot (Google Gemini with RAG) that answers questions about Ahmad's work, projects, and background
+- [Search](https://ahmadx.dev/search/): Full-text fuzzy search across all content powered by Fuse.js
+- [Categories](https://ahmadx.dev/categories/): Blog posts organized by category — tech, web, and life
+- [Resume](https://ahmadx.dev/Ahmad-Hassan-Resume.pdf): Downloadable PDF resume
+
+## Projects
+
+- [HyprFlux](https://hyprflux.dev): Hyprland dotfiles and configs for a minimal Arch Linux desktop. 800+ GitHub stars. Technologies: Linux, Arch Linux, Hyprland, Waybar, Shell, CSS. [Source](https://github.com/ahmad9059/HyprFlux)
+- [SehatScan](https://sehatscan.vercel.app): AI-powered health assessment platform that analyzes medical documents and facial images for personalized health insights. Technologies: Python, Next.js, TypeScript, AWS, Redis, PostgreSQL, Prisma, Google Gemini. [Source](https://github.com/ahmad9059/SehatScan)
+- [HisaabScore](https://hisaabscore.vercel.app): AI-powered alternative credit scoring system for gig workers and people in the informal economy. Technologies: TypeScript, Next.js, Tailwind, Firebase, Google Genkit, Gemini 2.0, Prisma. [Source](https://github.com/ahmad9059/HisaabScore)
+- [RAF-SP](https://raf-sp.vercel.app): Agricultural data management system. Technologies: TypeScript, Next.js, Tailwind, Prisma, Supabase, shadcn/ui, Framer Motion
+- [UAM Tracker](https://uam-tracker.vercel.app): GPA/CGPA tracker for university students. Technologies: TypeScript, Next.js, Tailwind, Prisma, PostgreSQL, Better Auth, Recharts. [Source](https://github.com/ahmad9059/uam-tracker)
+- [MindOasis](https://mindoasis.vercel.app): Mental health professional finder for users in Pakistan, powered by AI-generated profile summaries. Built at a hackathon. Technologies: TypeScript, Next.js, Tailwind, shadcn/ui, Firebase Genkit, Gemini. [Source](https://github.com/ahmad9059/MindOasis)
+- [CodingHawks](https://codinghawks.vercel.app): Official website for the Coding Hawks Society at MNS University of Agriculture. Technologies: TypeScript, Next.js, Tailwind, Prisma, Supabase, shadcn/ui. [Source](https://github.com/ahmad9059/codinghawks)
+
+## Certifications
+
+- AWS Certified Cloud Practitioner
+- AWS Introduction to Generative AI
+- Meta Front-End Developer Certificate
+- Meta Database Structures and Management with MySQL
+- Meta Introduction to Databases
+- Meta Programming with JavaScript
+- Google Agile Project Management
+- Google Cloud Digital Leader
+- Google Python
+- Google Data Analytics
+- Google Git and GitHub
+- GitHub Foundations
+- IBM DevOps
+- IBM Software Engineering
+- IBM Critical Thinking
+- HackerRank SQL Intermediate
+- HackerRank Problem Solving
+- Harvard CS50x Puzzle Day
+- UC Davis Critical Thinking Skills
+- DeepLearning.AI — AI For Everyone
+- UC Berkeley CALICO Spring '25
+
+## Key Achievements
+
+- Ranked #92 worldwide and #2 in Pakistan at UC Berkeley CALICO Spring '25 competition
+- 2,000+ GitHub contributions in 2025
+- HyprFlux project with 800+ GitHub stars
+- Full-time offer at VieroMind
+- 2nd position at Pakathon
+- 1st position at Maktab-e-Gulab competition
+- 1st position at Cybersecurity Workshop
+- 3rd position at Speed Programming competition
+- 400+ problems solved on LeetCode and GeeksforGeeks
+
+## Blog Posts — AWS Certified Cloud Practitioner Series
+
+- [Cloud Computing](https://ahmadx.dev/posts/aws-ccp-cloud-computing/): AWS CCP notes on cloud computing fundamentals
+- [IAM (Identity and Access Management)](https://ahmadx.dev/posts/aws-ccp-iam-identity-and-access-management/): AWS IAM users, groups, policies, roles, and security
+- [EC2 - Elastic Compute Cloud](https://ahmadx.dev/posts/aws-ccp-ec2-elastic-compute-cloud/): AWS EC2 instances, types, purchasing options, and setup
+- [EC2 - Instance Storage](https://ahmadx.dev/posts/aws-ccp-ec2-instance-storage/): EBS volumes, snapshots, AMIs, and storage options
+- [ELB & ASG](https://ahmadx.dev/posts/aws-ccp-elb-asg-elastic-load-balancing-auto-scaling-groups/): Elastic Load Balancing and Auto Scaling Groups
+- [Amazon S3](https://ahmadx.dev/posts/aws-ccp-amazon-s3/): S3 buckets, storage classes, versioning, and lifecycle
+- [Databases & Analytics](https://ahmadx.dev/posts/aws-ccp-databases-analytics/): RDS, Aurora, DynamoDB, Redshift, and analytics services
+- [Other Compute Services](https://ahmadx.dev/posts/aws-ccp-other-compute-services-ecs-lambda-batch-lightsail/): ECS, Lambda, Batch, and Lightsail
+- [Deployments & Managing Infrastructure at Scale](https://ahmadx.dev/posts/aws-ccp-deployments-managing-infrastructure-at-scale/): CloudFormation, Elastic Beanstalk, CodeDeploy, and more
+- [Leveraging the AWS Global Infrastructure](https://ahmadx.dev/posts/aws-ccp-leveraging-the-aws-global-infrastructure/): Route 53, CloudFront, Global Accelerator, and edge services
+- [Cloud Integrations](https://ahmadx.dev/posts/aws-ccp-cloud-integrations/): SQS, SNS, Kinesis, and Amazon MQ
+- [Cloud Monitoring](https://ahmadx.dev/posts/aws-ccp-cloud-monitoring/): CloudWatch, CloudTrail, X-Ray, and monitoring tools
+- [VPC & Networking](https://ahmadx.dev/posts/aws-ccp-vpc-networking/): VPC, subnets, security groups, NACLs, and networking
+- [Security & Compliance](https://ahmadx.dev/posts/aws-ccp-security-compliance/): AWS security services, compliance programs, and encryption
+- [Machine Learning](https://ahmadx.dev/posts/aws-ccp-machine-learning/): SageMaker, Rekognition, Comprehend, and ML services
+- [Account Management, Billing & Support](https://ahmadx.dev/posts/aws-ccp-account-management-billing-support/): AWS Organizations, billing, pricing, and support plans
+- [Advanced Identity](https://ahmadx.dev/posts/aws-ccp-advanced-identity/): AWS STS, Cognito, Directory Services, and IAM Identity Center
+- [Other Services](https://ahmadx.dev/posts/aws-ccp-other-services/): Additional AWS services overview
+
+## Blog Posts — Web Development
+
+- [HTML - The Language of the Web](https://ahmadx.dev/posts/html/): Comprehensive guide to HTML elements, forms, and semantics
+- [CSS - Cascading Style Sheets](https://ahmadx.dev/posts/css/): CSS fundamentals, selectors, box model, flexbox, grid, and responsive design
+- [Tailwind CSS](https://ahmadx.dev/posts/tailwind-css/): Utility-first CSS framework guide
+- [Fundamentals of JavaScript](https://ahmadx.dev/posts/fundamentals-of-javascript/): JavaScript basics — variables, types, operators, control flow, and functions
+- [JavaScript Advanced Concepts](https://ahmadx.dev/posts/javascript-advanced/): Closures, prototypes, classes, modules, and advanced patterns
+- [DOM Manipulation in JavaScript](https://ahmadx.dev/posts/dom-js/): Selecting, modifying, and interacting with DOM elements
+- [Asynchronous JavaScript](https://ahmadx.dev/posts/asynchronous-js/): Promises, async/await, fetch API, and event loop
+- [React – A JavaScript Library](https://ahmadx.dev/posts/reactjs/): React components, hooks, state management, and building UIs
+- [GSAP & Locomotive Scroll](https://ahmadx.dev/posts/gsap-locomotive/): Animation library integration for smooth web animations
+- [Becoming a Full-Stack Web Developer in 2025](https://ahmadx.dev/posts/web-dev-roadmap/): Complete roadmap for web development careers
+- [Build an AI Chatbot Web App with Google Gemini](https://ahmadx.dev/posts/chatbot/): Tutorial on building and deploying an AI chatbot on Vercel
+
+## Blog Posts — System Design & Architecture
+
+- [CAP Theorem](https://ahmadx.dev/posts/cap-theorem/): Consistency, availability, and partition tolerance in distributed systems
+- [Event Driven Architecture](https://ahmadx.dev/posts/event-driven-architecture/): Event-based system design patterns and implementation
+- [Microservice Architecture](https://ahmadx.dev/posts/microservice-architecture/): Microservices design, communication, and deployment patterns
+
+## Blog Posts — Databases
+
+- [Introduction to Databases - MySQL](https://ahmadx.dev/posts/mysql/): MySQL fundamentals, queries, and database design
+- [MS SQL Server and Azure Data Studio on Arch Linux](https://ahmadx.dev/posts/sqlserver/): Setting up SQL Server development environment on Linux
+
+## Blog Posts — Shell Scripting & Linux
+
+- [Introduction to Shell Scripting](https://ahmadx.dev/posts/intro-to-shell-scripting/): Shell scripting basics, commands, and automation
+- [Variables in Shell Scripting](https://ahmadx.dev/posts/variable-in-shell-scripting/): Variable declaration, types, and usage in shell scripts
+- [Shell Expansion in Shell Scripting](https://ahmadx.dev/posts/shell-expansion/): Parameter expansion, command substitution, and arithmetic expansion
+- [Shell Operation in Shell Scripting](https://ahmadx.dev/posts/shell-operation-shell-scripting/): Shell operations, control structures, and script execution
+- [Setting Up MPD and RMPC](https://ahmadx.dev/posts/setup-mpd-and-rmpc/): Music Player Daemon and RMPC client setup on Linux
+- [Arch Linux Installation on VMware](https://ahmadx.dev/posts/vmware-archlinux-installation/): Step-by-step guide for installing Arch Linux in a virtual machine
+
+## Blog Posts — Other
+
+- [The 80/20 Principle](https://ahmadx.dev/posts/80-20-rule/): Productivity and the Pareto principle applied to work and life
+- [What It Means to Feel for Someone](https://ahmadx.dev/posts/forher/): Personal reflections on relationships and emotional depth
+
+## Technical Stack
+
+- **Languages:** TypeScript, JavaScript, Python, Golang, SQL, Shell/Bash
+- **Frontend:** React, Next.js, Tailwind CSS, shadcn/ui, Framer Motion, GSAP
+- **Backend:** Node.js, Next.js API Routes, Golang, Vercel Serverless Functions
+- **Databases:** PostgreSQL, MySQL, MS SQL Server, Redis, Supabase, Firebase
+- **Cloud & DevOps:** AWS (EC2, S3, Lambda, and more), Vercel, Docker
+- **AI/ML:** Google Gemini API, RAG (Retrieval-Augmented Generation), Firebase Genkit
+- **Tools:** Neovim, VSCodium, Git, Arch Linux, Hyprland, Zsh
+- **Site Generator:** Hugo with PaperMod theme
+
+## Contact
+
+- Email: m.alibhatti1465@gmail.com
+- LinkedIn: https://www.linkedin.com/in/muhammad-ali-sajid/
+- GitHub: https://github.com/alibhatti23/
+- Instagram: https://www.instagram.com/ali.bhatti_ig/
+- Portfolio: 
+- RSS Feed: https://ahmadx.dev/index.xml

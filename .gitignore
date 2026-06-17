@@ -1,0 +1,28 @@
+# Hugo build files
+public/
+.hugo_build.lock
+
+# Environment variables
+.env
+.env.*
+
+# Node modules
+node_modules/
+api/node_modules/
+
+# Obsidian
+/content/posts/.obsidian/
+
+# Generated AI files
+api/knowledge.json
+api/embeddings.json
+
+# Temporary files
+temp/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# VS Code (optional)
+.vscode/

@@ -1,0 +1,244 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 10);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  line-height: var(--header-height);
+}
+
+.nav a {
+  display: block;
+}
+
+.logo,
+#menu {
+  display: flex;
+  margin: auto var(--gap);
+}
+
+.logo {
+  flex-wrap: inherit;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo a img,
+.logo a svg {
+  display: inline;
+  vertical-align: middle;
+  pointer-events: none;
+  transform: translate(0, -10%);
+  border-radius: 6px;
+  margin-inline-end: 8px;
+}
+
+/* Logo hover */
+.logo a:hover {
+  transition: 0.15s;
+  color: var(--accent, #5b8def);
+}
+
+/* Menu item hovers */
+#menu a {
+  transition: color 0.15s ease;
+}
+
+#menu a:hover {
+  color: var(--accent, #5b8def);
+}
+
+/* Social icon hovers */
+.social-icons a svg {
+  transition: color 0.15s ease;
+}
+
+.social-icons a svg:hover {
+  color: var(--accent, #5b8def) !important;
+}
+
+/* Theme toggle hovers */
+#moon:hover {
+  transition: 0.15s;
+  color: var(--accent, #5b8def);
+}
+
+#sun:hover {
+  transition: 0.15s;
+  color: #ffcb6b;
+}
+
+button#theme-toggle {
+  font-size: 26px;
+  margin: auto 4px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark #moon {
+  vertical-align: middle;
+  display: none;
+}
+
+body:not(.dark) #sun {
+  display: none;
+}
+
+#menu {
+  list-style: none;
+  word-break: keep-all;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#menu li + li {
+  margin-inline-start: var(--gap);
+}
+
+#menu a {
+  font-size: 16px;
+}
+
+#menu .active {
+  font-weight: 500;
+  border-bottom: 2px solid currentColor;
+}
+
+.lang-switch li,
+.lang-switch ul,
+.logo-switches {
+  display: inline-flex;
+  margin: auto 4px;
+}
+
+.lang-switch {
+  display: flex;
+  flex-wrap: inherit;
+}
+
+.lang-switch a {
+  margin: auto 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logo-switches {
+  flex-wrap: inherit;
+}
+
+/* ── Hamburger menu toggle ── */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin: auto 4px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+#menu-toggle svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#menu-toggle:hover {
+  color: var(--accent, #5b8def);
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: relative;
+  }
+
+  #menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: var(--gap);
+    top: 0;
+    height: var(--header-height);
+    min-width: 44px;
+    z-index: 1001;
+  }
+
+  /* Floating menu card — centered */
+  #menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    width: min(200px, 80vw);
+    flex-direction: column;
+    margin: 0;
+    padding: 4px 0;
+    white-space: normal;
+    overflow: hidden;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+  }
+
+  #menu.show {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+  }
+
+  #menu li {
+    padding: 0;
+  }
+
+  #menu li + li {
+    margin-inline-start: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  #menu a {
+    font-size: 14px;
+    display: block;
+    padding: 6px 20px;
+    text-align: center;
+  }
+
+  #menu a:hover {
+    background: var(--tertiary);
+  }
+
+  /* Blurred backdrop */
+  #menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: opacity 0.18s ease;
+  }
+
+  #menu-backdrop.show {
+    display: block;
+  }
+}
