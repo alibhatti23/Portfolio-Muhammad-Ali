@@ -1,0 +1,37 @@
+
+.terms-tags li {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 500;
+
+    font-size: clamp(18px, 4vw, 35px);
+    -webkit-line-clamp: 3;
+}
+.terms-tags li:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    /* box-shadow: 0 0 0 1px grey; */
+    transform: scale(1.02) translateZ(0) translate3d(0, 0, 0) rotate(0.01deg);
+}
+
+.terms-tags a {
+    font-family: "JetBrains Mono", sans-serif;
+    display: block;
+    padding: 20px 30px;
+    background: var(--entry);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: transform 0.1s;
+}
+
+.terms-tags a:active {
+    background: var(--entry);
+    transform: scale(0.96);
+}

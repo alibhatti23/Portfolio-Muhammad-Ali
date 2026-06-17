@@ -1,0 +1,4 @@
+{{ $lang := .Type | default "text" }}
+<div class="code-block" data-lang="{{ $lang }}">
+  {{- highlight .Inner .Type .Options -}}
+</div>

@@ -1,0 +1,157 @@
+/* Theme color palette - shadcn/ui inspired */
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 60px;
+    --footer-height: 60px;
+
+    /* Font families */
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+    /* Warm cream color palette - Light mode */
+    --card: #fffcf5;
+    --ring: #ddd7c8;
+    --input: #ddd7c8;
+    --muted: #ede8da;
+    --accent: #ede8da;
+    --border: #ddd7c8;
+    --radius: 0.625rem;
+    --chart-1: #c2590a;
+    --chart-2: #0d9488;
+    --chart-3: #164e63;
+    --chart-4: #d4a017;
+    --chart-5: #d97706;
+    --popover: #fffcf5;
+    --primary: #2d2a24;
+    --sidebar: #f0ecdf;
+    --secondary: #ede8da;
+    --background: #f6f2e8;
+    --foreground: #2d2a24;
+    --destructive: #c53030;
+    --sidebar-ring: #ddd7c8;
+    --sidebar-accent: #ede8da;
+    --sidebar-border: #ddd7c8;
+    --card-foreground: #2d2a24;
+    --sidebar-primary: #2d2a24;
+    --muted-foreground: #8a8577;
+    --accent-foreground: #2d2a24;
+    --popover-foreground: #2d2a24;
+    --primary-foreground: #f6f2e8;
+    --sidebar-foreground: #2d2a24;
+    --secondary-foreground: #2d2a24;
+    --destructive-foreground: #c53030;
+    --sidebar-accent-foreground: #2d2a24;
+    --sidebar-primary-foreground: #f6f2e8;
+
+    /* Legacy compatibility variables - mapped to new palette */
+    --theme: var(--background);
+    --entry: var(--card);
+    --tertiary: var(--muted);
+    --content: var(--foreground);
+    /* Code blocks - light mode (warm cream backgrounds) */
+    --code-block-bg: #ede8da;
+    --code-bg: #f6f2e8;
+    --code-block-border: #ddd7c8;
+    /* Override accent for hover states - use chart colors */
+    --accent: var(--chart-1);
+}
+
+.dark {
+    /* shadcn/ui color palette - Dark mode */
+    --card: #0a0a0a;
+    --ring: #52525b;
+    --input: #27272a;
+    --muted: #18181b;
+    --accent: #18181b;
+    --border: #27272a;
+    --radius: 0.625rem;
+    --chart-1: #1d4ed8;
+    --chart-2: #10b981;
+    --chart-3: #f59e0b;
+    --chart-4: #8b5cf6;
+    --chart-5: #f43f5e;
+    --popover: #0a0a0a;
+    --primary: #fafafa;
+    --sidebar: #171717;
+    --secondary: #27272a;
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --destructive: #7f1d1d;
+    --sidebar-ring: #52525b;
+    --sidebar-accent: #262626;
+    --sidebar-border: #27272a;
+    --card-foreground: #fafafa;
+    --sidebar-primary: #1d4ed8;
+    --muted-foreground: #a1a1aa;
+    --accent-foreground: #fafafa;
+    --popover-foreground: #fafafa;
+    --primary-foreground: #18181b;
+    --sidebar-foreground: #fafafa;
+    --secondary-foreground: #fafafa;
+    --destructive-foreground: #ef4444;
+    --sidebar-accent-foreground: #fafafa;
+    --sidebar-primary-foreground: #fafafa;
+
+    /* Legacy compatibility variables - mapped to new palette */
+    --theme: var(--background);
+    --entry: var(--card);
+    --tertiary: var(--muted);
+    --content: var(--foreground);
+    /* Code blocks - dark mode (very dark backgrounds) */
+    --code-block-bg: #0a0a0a;
+    --code-bg: #18181b;
+    --code-block-border: #27272a;
+    --accent: var(--chart-1);
+}
+
+.list {
+    background: var(--code-bg);
+}
+
+.dark.list {
+    background: var(--theme);
+}
+
+/* @theme inline for modern CSS framework support */
+@theme inline {
+    --color-card: var(--card);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-muted: var(--muted);
+    --color-accent: var(--accent);
+    --color-border: var(--border);
+    --color-radius: var(--radius);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-popover: var(--popover);
+    --color-primary: var(--primary);
+    --color-sidebar: var(--sidebar);
+    --color-font-mono: var(--font-mono);
+    --color-font-sans: var(--font-sans);
+    --color-secondary: var(--secondary);
+    --color-background: var(--background);
+    --color-font-serif: var(--font-serif);
+    --color-foreground: var(--foreground);
+    --color-destructive: var(--destructive);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-card-foreground: var(--card-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+}

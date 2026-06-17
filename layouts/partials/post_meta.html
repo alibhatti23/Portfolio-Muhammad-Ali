@@ -1,0 +1,50 @@
+{{- $scratch := newScratch }}
+{{- $isUrdu := eq (.Param "textLang") "ur" }}
+
+{{- if $isUrdu -}}
+  {{- $months := slice "" "جنوری" "فروری" "مارچ" "اپریل" "مئی" "جون" "جولائی" "اگست" "ستمبر" "اکتوبر" "نومبر" "دسمبر" -}}
+  {{- if not .Date.IsZero -}}
+    {{- $dateText := printf "%s %s %s" (partial "urdu_digits.html" (.Date.Format "2")) (index $months (int (.Date.Format "1"))) (partial "urdu_digits.html" (.Date.Format "2006")) -}}
+    {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) $dateText)) -}}
+  {{- end -}}
+
+  {{- if (.Param "ShowReadingTime") -}}
+    {{- $scratch.Add "meta" (slice (printf "%s منٹ" (partial "urdu_digits.html" (printf "%d" .ReadingTime)))) -}}
+  {{- end -}}
+
+  {{- if (.Param "ShowWordCount") -}}
+    {{- $scratch.Add "meta" (slice (printf "%s الفاظ" (partial "urdu_digits.html" (printf "%d" .WordCount)))) -}}
+  {{- end -}}
+
+  {{- if not (.Param "hideAuthor") -}}
+    {{- with (.Param "authorUr") -}}
+      {{- $scratch.Add "meta" (slice .) -}}
+    {{- else -}}
+      {{- with (partial "author.html" .) -}}
+        {{- $scratch.Add "meta" (slice .) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- if not .Date.IsZero -}}
+    {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) -}}
+  {{- end -}}
+
+  {{- if (.Param "ShowReadingTime") -}}
+    {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) -}}
+  {{- end -}}
+
+  {{- if (.Param "ShowWordCount") -}}
+    {{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d words" .WordCount))) -}}
+  {{- end -}}
+
+  {{- if not (.Param "hideAuthor") -}}
+    {{- with (partial "author.html" .) -}}
+      {{- $scratch.Add "meta" (slice .) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with ($scratch.Get "meta") }}
+  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

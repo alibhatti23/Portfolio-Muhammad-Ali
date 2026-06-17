@@ -1,0 +1,216 @@
+{{- /* Head custom content area start */ -}}
+
+{{- /* Enhanced robots meta with max-image-preview for better SERP thumbnails */ -}}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+{{- end }}
+
+{{- /* Twitter creator and site */ -}}
+<meta name="instagram:creator" content="@ali.bhatti_ig">
+<meta name="instagram:site" content="@ali.bhatti_ig">
+
+{{- /* JSON-LD Schema for Person + Website */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.BaseURL }}#person",
+      "name": "Muhammad Ali Sajid",
+      "url": "{{ site.BaseURL }}",
+      "image": "{{ site.BaseURL }}assets/profile-1.webp",
+      "description": "{{ site.Params.description }}",
+      "jobTitle": "AFA & Shopify Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "creatify"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Institute of Cost and Management Accountants, Multan"
+      },
+      "knowsAbout": ["Shopify", "Liquid", "HTML", "css", "JavaScript", "Excel", "Power BI", "Open Source"],
+      "sameAs": [
+        "https://www.linkedin.com/in/muhammad-ali-sajid/",
+        "https://github.com/alibhatti23",
+        "https://www.instagram.com/ali.bhatti_ig/",
+        "https://www.facebook.com/profile.php?id=61550979278364"
+      ],
+      "email": "mailto:m.alibhatti1465@gmail.com",
+      "nationality": {
+        "@type": "Country",
+        "name": "Pakistan"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.BaseURL }}#website",
+      "name": "{{ site.Title }}",
+      "url": "{{ site.BaseURL }}",
+      "description": "{{ site.Params.description }}",
+      "publisher": {
+        "@id": "{{ site.BaseURL }}#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.BaseURL }}search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+{{- end }}
+
+{{- /* JSON-LD Schema for Blog Posts */ -}}
+{{- if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "wordCount": "{{ .WordCount }}",
+  "inLanguage": "{{ .Language.Lang | default "en-us" }}",
+  {{- with .Params.cover.image }}
+  "image": "{{ . | absURL }}",
+  {{- end }}
+  "author": {
+    "@id": "{{ site.BaseURL }}#person"
+  },
+  "publisher": {
+    "@id": "{{ site.BaseURL }}#person"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+  {{- with .Params.keywords }},
+  "keywords": [{{ range $i, $e := . }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}]
+  {{- else }}{{- with .Params.tags }},
+  "keywords": [{{ range $i, $e := . }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}]
+  {{- end }}{{- end }}
+}
+</script>
+{{- end }}
+
+{{- /* JSON-LD Schema for Projects page (ItemList) */ -}}
+{{- if and .File (eq .File.LogicalName "projects.md") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Projects by Muhammad Ali Sajid",
+  "description": "{{ .Description }}",
+  "url": "{{ .Permalink }}",
+  "numberOfItems": 7,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Website",
+        "name": "Mage",
+        "description": "Maje.ae is the official UAE e-commerce store for Maje Paris, a luxury Parisian womenswear brand. The store is built on Shopify using a fully customized Dawn theme, tailored to reflect the brand's premium, fashion-forward identity. The result is a clean, editorial-style shopping experience designed specifically for the UAE luxury market.",
+        "url": "https://www.maje.ae/",
+
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "WebSite",
+        "name": "Rhode",
+        "description": "Rhode Skin is Hailey Bieber's cult DTC beauty brand built on a fully custom Shopify theme. The store carries a soft, editorial aesthetic — warm cream tones, lowercase typography, and autoplay campaign videos that pull you straight into the brand world. The homepage is one immersive scroll with full-bleed imagery, horizontal product carousels, and inline Add to Cart buttons — no clutter, zero friction. Smart conversion features like Early Access login gates, waitlists, BNPL, and embedded press awards make it one of the most well-executed beauty Shopify stores on the market.",
+        "url": "https://www.rhodeskin.com/",
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Website",
+        "name": "Caliphe Clothing",
+        "description": "A Pakistani activewear and fashion brand built on a fully customized Shopify Dawn theme. The store opens with a full-width autoplay video hero 'Performance Meets Style, Built for Movement.'",
+        "url": "https://calipheclothing.com/",
+      
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SourceCode",
+        "name": "Finance KPIs Dashboard",
+        "description": "A comprehensive financial analytics dashboard designed to track, analyze, and visualize key business performance metrics in real time. The system transforms raw financial data into actionable insights, enabling better decision-making for business growth and efficiency.The dashboard provides a clear overview of core KPIs including revenue, expenses, profit margins, cash flow, and growth trends. It is structured to help users quickly understand financial health through interactive charts, summaries, and breakdowns by category and time period.",
+        "codeRepository": "https://github.com/alibhatti23/Finance-KPIs-Dashboard",
+        "Software": ["Excel", "Power BI"],
+        "author": { "@id": "{{ site.BaseURL }}#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SourceCode",
+        "name": "Budget & Forecasting Model",
+        "description": "Budget and Forecasting Model is a financial planning system designed to help businesses plan, track, and predict future income and expenses. It enables scenario analysis, budgeting, and financial forecasting to support strategic decision-making and long-term growth.",
+        "codeRepository": "https://github.com/alibhatti23/Budget-Forecasting-Model",
+        "Software": ["Excel", "Power BI"],
+        "author": { "@id": "{{ site.BaseURL }}#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "SourceCode",
+        "name": "sales Performance Analytics Dashboard",
+        "description": "Sales Performance Analytics Dashboard visualizes key business metrics like revenue, profit, and expenses. It tracks sales trends, highlights top products, and provides actionable insights to support data-driven decision-making and improve overall business performance.",
+        "codeRepository": "https://github.com/alibhatti23/Sales-Performance-Analytics-Dashboard",
+        "Software": ["Excel", "Power BI"],
+        "author": { "@id": "{{ site.BaseURL }}#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "SourceCode",
+        "name": "Small Business Bookkeeping System",
+        "description": "A simple yet structured bookkeeping system designed for small businesses to record and manage daily financial transactions in an organized way. The system helps track income, expenses, and basic financial activities to maintain clear and accurate financial records.It enables business owners to monitor cash flow, understand profit and loss, and keep all financial entries systematically categorized for better financial control and decision-making. The model is built to reduce manual confusion and improve financial clarity for small-scale operations.",
+        "codeRepository": "https://github.com/alibhatti23/Business-Bookkeeping-System",
+        "Software": ["Excel", "Power BI"],
+        "author": { "@id": "{{ site.BaseURL }}#person" }
+      }
+    }
+  ]
+}
+</script>
+{{- end }}
+
+{{- /* Google Fonts - non-render-blocking */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" />
+<link
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet" media="print" onload="this.media='all'" />
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet"
+  media="print" onload="this.media='all'" />
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+    rel="stylesheet" />
+</noscript>

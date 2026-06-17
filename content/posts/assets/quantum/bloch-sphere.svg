@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400">
+  <rect width="700" height="400" fill="#ffffff" rx="12"/>
+  <text x="230" y="28" fill="#111111" font-family="monospace" font-size="16" text-anchor="middle" font-weight="bold">Bloch Sphere</text>
+  <circle cx="230" cy="225" r="145" fill="#f0f0f0" stroke="#222222" stroke-width="1.5" stroke-opacity="0.2"/>
+  <ellipse cx="230" cy="225" rx="145" ry="47" fill="none" stroke="#222222" stroke-width="0.8" stroke-opacity="0.2" stroke-dasharray="6,4"/>
+  <line x1="230" y1="62" x2="230" y2="388" stroke="#222222" stroke-width="1.2" stroke-opacity="0.2"/>
+  <polygon points="230,58 235,68 225,68" fill="#222222"/>
+  <text x="244" y="72" fill="#222222" font-family="monospace" font-size="14" font-weight="bold">|0&#x27E9;</text>
+  <text x="244" y="384" fill="#222222" font-family="monospace" font-size="14" font-weight="bold">|1&#x27E9;</text>
+  <line x1="70" y1="225" x2="390" y2="225" stroke="#111111" stroke-width="1.2" stroke-opacity="0.2"/>
+  <text x="395" y="243" fill="#111111" font-family="monospace" font-size="14" font-weight="bold">|+&#x27E9;</text>
+  <line x1="230" y1="225" x2="332" y2="128" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="330,130 322,124 337,122" fill="#000000"/>
+  <path d="M 230,175 A 50,50 0 0,1 252,187" fill="none" stroke="#444444" stroke-width="1.5"/>
+  <text x="216" y="185" fill="#444444" font-family="monospace" font-size="13">&#x3B8;</text>
+  <path d="M 238,225 A 35,11 0 0,1 264,223" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <text x="266" y="238" fill="#333333" font-family="monospace" font-size="13">&#x3C6;</text>
+  <text x="337" y="122" fill="#000000" font-family="monospace" font-size="15" font-weight="bold">|&#x3C8;&#x27E9;</text>
+  <text x="230" y="395" fill="#666666" font-family="monospace" font-size="11" text-anchor="end">|&#x3C8;&#x27E9; = cos(&#x3B8;)|0&#x27E9; + e&#x2071;&#x3C6;sin(&#x3B8;)|1&#x27E9;</text>
+  <!-- Right side: key explanation -->
+  <rect x="440" y="50" width="240" height="320" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="1"/>
+  <text x="560" y="80" fill="#111111" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold">Sphere Coordinates</text>
+  <line x1="460" y1="92" x2="660" y2="92" stroke="#bbbbbb" stroke-width="0.8"/>
+  <text x="470" y="115" fill="#222222" font-family="monospace" font-size="11">North pole:  |0&#x27E9;</text>
+  <text x="470" y="145" fill="#222222" font-family="monospace" font-size="11">South pole:  |1&#x27E9;</text>
+  <text x="470" y="175" fill="#222222" font-family="monospace" font-size="11">Equator:     equal superposition</text>
+  <text x="470" y="205" fill="#222222" font-family="monospace" font-size="11">&#x3B8; (theta): polar angle</text>
+  <text x="470" y="235" fill="#222222" font-family="monospace" font-size="11">&#x3C6; (phi):   azimuthal angle</text>
+  <line x1="460" y1="252" x2="660" y2="252" stroke="#bbbbbb" stroke-width="0.8"/>
+  <text x="470" y="275" fill="#000000" font-family="monospace" font-size="11" font-weight="bold">|&#x3C8;&#x27E9; = cos(&#x3B8;)|0&#x27E9;</text>
+  <text x="480" y="295" fill="#000000" font-family="monospace" font-size="11" font-weight="bold">+ e&#x2071;&#x3C6;sin(&#x3B8;)|1&#x27E9;</text>
+  <line x1="460" y1="310" x2="660" y2="310" stroke="#bbbbbb" stroke-width="0.8"/>
+  <text x="470" y="335" fill="#777777" font-family="monospace" font-size="10">Vector |&#x3C8;&#x27E9; can point</text>
+  <text x="470" y="352" fill="#777777" font-family="monospace" font-size="10">anywhere on the sphere</text>
+</svg>

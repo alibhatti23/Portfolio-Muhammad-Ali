@@ -1,0 +1,155 @@
+baseURL: 
+locale: en-us
+title: Muhammad Ali Sajid
+theme: hugo-PaperMod-master
+copyright: "Muhammad Ali Sajid"
+googleAnalytics: "G-2GLY0PDB4W"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: certifications
+      name: Certs
+      url: /certifications/
+      weight: 30
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 40
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 45
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+    - identifier: chat
+      name: Chat
+      url: /chat/
+      weight: 60
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 70
+
+ignoreLogs: "warning-goldmark-raw-html"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+taxonomies:
+  category: categories
+  tag: tags
+
+services:
+  rss:
+    limit: 20
+
+minify:
+  disableXML: false
+  minifyOutput: true
+
+params:
+  env: production
+  keywords: [Muhammad Ali Sajid, Cost and Management Accountant, Web Developer, Portfolio, Blog, React, Next.js, Excel, Pakistan]
+  description: "Muhammad Ali Sajid - Affiliate Financial Accountant & Web Developer. Building innovative web applications, open-source projects, and sharing knowledge through Blogs."
+  author: "Muhammad Ali Sajid"
+  title: Muhammad Ali Sajid | Cost and Management Accountant
+  seoTitle: Muhammad Ali Sajid - Cost and Management Accountant
+  defaultTheme: auto
+  images: ["/assets/opengraph.webp"]
+  label:
+    text: "Muhammad Ali Sajid"
+  profileMode:
+    enabled: true
+    title: "Muhammad Ali Sajid" # optional default will be site title
+    subtitle: "Affiliate Financial Accountant & Web Developer"
+    imageUrl: "/assets/profile-1.webp" # Ensure this file exists
+    imageTitle: "Muhammad Ali Sajid - Affiliate Financial Accountant from Pakistan"
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: blogs
+        url: "/posts/"
+      - name: tools
+        url: "/tools/"
+      - name: resume
+        url: "/Muhammad-Ali-Sajid-Resume.pdf"
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/alibhatti23"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/muhammad-ali-sajid//"
+    - name: "instagram"
+      url: "https://www.instagram.com/ali.bhatti_ig/"
+    - name: "facebook"
+      url: "https://www.facebook.com/profile.php?id=61550979278364"
+    - name: "whatsapp"
+      url: "https://wa.me/923123626704"
+    - name: "email"
+      url: "mailto:m.alibhatti1465@gmail.com"
+  assets:
+    favicon: "/assets/fav.ico"
+    favicon16x16: "/assets/favicon-16x16.png"
+    favicon32x32: "/assets/favicon-32x32.png"
+    apple_touch_icon: "/assets/apple-touch-icon.png"
+    css:
+      - css/extended/urdu-font.css
+      - css/extended/code-light.css
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: false
+    style: dracula
+    tabWidth: 4
+    wrapperClass: highlight
