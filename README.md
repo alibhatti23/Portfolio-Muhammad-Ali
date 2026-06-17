@@ -3,11 +3,11 @@
 Static portfolio, blog, and certification showcase for Muhammad Ali Sajid. Built with Hugo and a customized PaperMod theme featuring a bespoke #131418 palette, keyboard-driven search, and interactive project/certification grids.
 
 ## Live Site
-- Production: [ahmadx.dev](https://ahmadx.dev)
-- Base URL in config: `https://ahmadx.dev` (update `hugo.yaml` if you fork).
+- Production: [ahmadx.dev](https://alibhatti.me)
+- Base URL in config: `https://alibhatti.me` (update `hugo.yaml` if you fork).
 
 ## Stack at a Glance
-- Hugo **0.140.2** (extended) with PaperMod theme bundled locally under `themes/PaperMod`.
+- Hugo **0.163.2** (extended) with PaperMod theme bundled locally under `themes/PaperMod`.
 - Custom styling: JetBrains Mono + Work Sans + Noto Nastaliq Urdu, tailored light/dark palettes (`assets/css/core/theme-vars.css`, `assets/css/extended/*.css`).
 - Search overlay powered by Fuse.js with keyboard shortcuts (`Ctrl+K` or `/`) and JSON index output (`outputs.home` includes `index.json`).
 - On-page UX details: code copy buttons, tailored syntax highlighting for light mode, smooth scroll-to-top, and tag/category icons.
