@@ -3,7 +3,7 @@
 Static portfolio, blog, and certification showcase for Muhammad Ali Sajid. Built with Hugo and a customized PaperMod theme featuring a bespoke #131418 palette, keyboard-driven search, and interactive project/certification grids.
 
 ## Live Site
-- Production: [ahmadx.dev](https://alibhatti.me)
+- Production: [alibhatti.me](https://alibhatti.me)
 - Base URL in config: `https://alibhatti.me` (update `hugo.yaml` if you fork).
 
 ## Stack at a Glance
