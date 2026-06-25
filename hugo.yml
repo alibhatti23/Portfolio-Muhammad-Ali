@@ -66,11 +66,11 @@ minify:
 
 params:
   env: production
-  keywords: [Muhammad Ali Sajid, Cost and Management Accountant, Web Developer, Portfolio, Blog, React, Next.js, Excel, Pakistan]
+  keywords: [Muhammad Ali Sajid, Affiliate Financial Accountant, Web Developer, Portfolio, Blog, React, Next.js, Excel, liquid, Pakistan]
   description: "Muhammad Ali Sajid - Affiliate Financial Accountant & Web Developer. Building innovative web applications, open-source projects, and sharing knowledge through Blogs."
   author: "Muhammad Ali Sajid"
-  title: Muhammad Ali Sajid | Cost and Management Accountant
-  seoTitle: Muhammad Ali Sajid - Cost and Management Accountant
+  title: Muhammad Ali Sajid | Affiliate Financial Accountant
+  seoTitle: Muhammad Ali Sajid - Affiliate Financial Accountant
   defaultTheme: auto
   images: ["/assets/opengraph.webp"]
   label:
