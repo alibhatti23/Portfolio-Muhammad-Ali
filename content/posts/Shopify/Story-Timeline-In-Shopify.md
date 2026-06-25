@@ -1,0 +1,995 @@
+---
+title: "Story Timeline In Shopify(Without app- Free)"
+draft: false
+date: 2026-06-22
+description: "Learn how to create an interactive Story Timeline in Shopify using custom Liquid, HTML, CSS, and JavaScript. Display brand history, product journeys, milestones, achievements, or step-by-step processes in a visually engaging timeline section that enhances user experience and storytelling."
+categories:
+  - Shopify
+tags:
+    - Shopify
+    - Shopify Development
+    - Shopify Customization
+    - Shopify Liquid
+    - Web Development
+    - Frontend Development
+    - E-commerce
+    - UI/UX Design
+    - Shopify Tutorial
+    - Theme Development
+    - Custom Sections
+    - JavaScript
+    - CSS
+    - Brand Storytelling
+    - Store Design
+keywords:
+    - Story Timeline Shopify
+    - Shopify timeline section
+    - Shopify story timeline code
+    - Shopify milestone timeline
+    - Shopify custom timeline
+    - Shopify brand story section
+    - Shopify timeline widget
+    - Shopify theme customization
+    - Shopify Liquid timeline
+    - interactive timeline Shopify
+    - Shopify about us timeline
+    - Shopify development tutorial
+    - Shopify custom section
+    - Shopify frontend design
+    - Shopify storytelling feature
+Author: Muhammad Ali Sajid
+---
+
+Create a new section file called **story-timeline.liquid** and add the following code:
+
+<details>
+
+<summary>Show Code</summary>
+
+```liquid
+
+{% assign wbs_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .wbs-journey-map-{{ wbs_id }} {
+    padding: 60px 20px;
+    background-color: {{ section.settings.background_color }};
+    overflow: hidden;
+  }
+
+  .wbs-journey-map__heading-{{ wbs_id }} {
+    text-align: center;
+    margin-bottom: 20px;
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.heading_size }}px;
+  }
+
+  .wbs-journey-map__subheading-{{ wbs_id }} {
+    text-align: center;
+    margin-bottom: 60px;
+    color: {{ section.settings.subtext_color }};
+    font-size: {{ section.settings.subheading_size }}px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wbs-journey-map__container-{{ wbs_id }} {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .wbs-journey-map__timeline-{{ wbs_id }} {
+    position: relative;
+    padding: 40px 0;
+  }
+
+  .wbs-journey-map__line-{{ wbs_id }} {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, {{ section.settings.timeline_start_color }}, {{ section.settings.timeline_end_color }});
+    border-radius: 2px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wbs-journey-map__line-{{ wbs_id }} {
+      left: 30px;
+    }
+  }
+
+  .wbs-journey-map__stage-{{ wbs_id }} {
+    position: relative;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .wbs-journey-map__stage-{{ wbs_id }}.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .wbs-journey-map__stage-{{ wbs_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .wbs-journey-map__stage-content-{{ wbs_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wbs-journey-map__stage-content-{{ wbs_id }} {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-left: 80px;
+    }
+  }
+
+  .wbs-journey-map__stage-{{ wbs_id }}:nth-child(even) .wbs-journey-map__stage-content-{{ wbs_id }} {
+    direction: rtl;
+  }
+
+  .wbs-journey-map__stage-{{ wbs_id }}:nth-child(even) .wbs-journey-map__stage-text-{{ wbs_id }},
+  .wbs-journey-map__stage-{{ wbs_id }}:nth-child(even) .wbs-journey-map__stage-image-{{ wbs_id }} {
+    direction: ltr;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wbs-journey-map__stage-{{ wbs_id }}:nth-child(even) .wbs-journey-map__stage-content-{{ wbs_id }} {
+      direction: ltr;
+    }
+  }
+
+  .wbs-journey-map__stage-marker-{{ wbs_id }} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: {{ section.settings.marker_size }}px;
+    height: {{ section.settings.marker_size }}px;
+    background-color: {{ section.settings.marker_color }};
+    border: 4px solid {{ section.settings.background_color }};
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 8px {{ section.settings.marker_ring_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .wbs-journey-map__stage-marker-{{ wbs_id }} {
+      left: 30px;
+    }
+  }
+
+  .wbs-journey-map__stage-marker-{{ wbs_id }} svg {
+    width: 50%;
+    height: 50%;
+    color: {{ section.settings.marker_icon_color }};
+  }
+
+  .wbs-journey-map__stage-number-{{ wbs_id }} {
+    font-size: 18px;
+    font-weight: 700;
+    color: {{ section.settings.marker_icon_color }};
+  }
+
+  .wbs-journey-map__stage-text-{{ wbs_id }} {
+    padding: 30px;
+    background-color: {{ section.settings.card_background }};
+    border-radius: {{ section.settings.card_border_radius }}px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .wbs-journey-map__stage-text-{{ wbs_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .wbs-journey-map__stage-label-{{ wbs_id }} {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: {{ section.settings.label_background }};
+    color: {{ section.settings.label_text_color }};
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .wbs-journey-map__stage-title-{{ wbs_id }} {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: {{ section.settings.text_color }};
+  }
+
+  .wbs-journey-map__stage-description-{{ wbs_id }} {
+    font-size: 16px;
+    line-height: 1.6;
+    color: {{ section.settings.subtext_color }};
+  }
+
+  .wbs-journey-map__stage-image-{{ wbs_id }} {
+    position: relative;
+    border-radius: {{ section.settings.image_border_radius }}px;
+    overflow: hidden;
+    aspect-ratio: {{ section.settings.image_aspect_ratio }};
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .wbs-journey-map__stage-image-{{ wbs_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .wbs-journey-map__stage-image-{{ wbs_id }}:hover img {
+    transform: scale(1.05);
+  }
+
+  .wbs-journey-map__stage-image-placeholder-{{ wbs_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wbs-journey-map__stage-image-placeholder-{{ wbs_id }} svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+  }
+
+  .wbs-journey-map__cta-{{ wbs_id }} {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .wbs-journey-map__cta-button-{{ wbs_id }} {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ section.settings.button_border_radius }}px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .wbs-journey-map__cta-button-{{ wbs_id }}:hover {
+    background-color: {{ section.settings.button_hover_color }};
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .wbs-journey-map__empty-state-{{ wbs_id }} {
+    text-align: center;
+    padding: 80px 20px;
+    color: {{ section.settings.subtext_color }};
+  }
+
+  .wbs-journey-map__empty-state-{{ wbs_id }} svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+{% endstyle %}
+
+<wbs-journey-map-{{ wbs_id }} class="wbs-journey-map-{{ wbs_id }}" {{ section.shopify_attributes }}>
+  {% if section.settings.heading != blank %}
+    <h2 class="wbs-journey-map__heading-{{ wbs_id }}">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  {% if section.settings.subheading != blank %}
+    <div class="wbs-journey-map__subheading-{{ wbs_id }}">{{ section.settings.subheading }}</div>
+  {% endif %}
+
+  <div class="wbs-journey-map__container-{{ wbs_id }}">
+    {% assign has_stages = false %}
+    {% for i in (1..6) %}
+      {% assign title_key = 'stage_' | append: i | append: '_title' %}
+      {% if section.settings[title_key] != blank %}
+        {% assign has_stages = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_stages %}
+      <div class="wbs-journey-map__timeline-{{ wbs_id }}">
+        <div class="wbs-journey-map__line-{{ wbs_id }}"></div>
+
+        {% for i in (1..6) %}
+          {% assign title_key = 'stage_' | append: i | append: '_title' %}
+          {% assign label_key = 'stage_' | append: i | append: '_label' %}
+          {% assign description_key = 'stage_' | append: i | append: '_description' %}
+          {% assign image_key = 'stage_' | append: i | append: '_image' %}
+          {% assign icon_key = 'stage_' | append: i | append: '_icon' %}
+
+          {% if section.settings[title_key] != blank %}
+            <div class="wbs-journey-map__stage-{{ wbs_id }}" data-stage>
+              <div class="wbs-journey-map__stage-marker-{{ wbs_id }}">
+                {% if section.settings[icon_key] == 'number' %}
+                  <span class="wbs-journey-map__stage-number-{{ wbs_id }}">{{ i }}</span>
+                {% elsif section.settings[icon_key] == 'lightbulb' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                {% elsif section.settings[icon_key] == 'pencil' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                {% elsif section.settings[icon_key] == 'cube' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                {% elsif section.settings[icon_key] == 'gift' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                  </svg>
+                {% elsif section.settings[icon_key] == 'truck' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                {% elsif section.settings[icon_key] == 'heart' %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                {% else %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                {% endif %}
+              </div>
+
+              <div class="wbs-journey-map__stage-content-{{ wbs_id }}">
+                <div class="wbs-journey-map__stage-text-{{ wbs_id }}">
+                  {% if section.settings[label_key] != blank %}
+                    <span class="wbs-journey-map__stage-label-{{ wbs_id }}">{{ section.settings[label_key] }}</span>
+                  {% endif %}
+                  <h3 class="wbs-journey-map__stage-title-{{ wbs_id }}">{{ section.settings[title_key] }}</h3>
+                  {% if section.settings[description_key] != blank %}
+                    <div class="wbs-journey-map__stage-description-{{ wbs_id }}">{{ section.settings[description_key] }}</div>
+                  {% endif %}
+                </div>
+
+                <div class="wbs-journey-map__stage-image-{{ wbs_id }}">
+                  {% if section.settings[image_key] != blank %}
+                    <img 
+                      src="{{ section.settings[image_key] | image_url: width: 800 }}" 
+                      alt="{{ section.settings[image_key].alt | escape }}"
+                      loading="lazy"
+                      width="{{ section.settings[image_key].width }}"
+                      height="{{ section.settings[image_key].height }}"
+                    >
+                  {% else %}
+                    <div class="wbs-journey-map__stage-image-placeholder-{{ wbs_id }}">
+                      {{ 'image' | placeholder_svg_tag }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if section.settings.show_cta and section.settings.cta_text != blank %}
+        <div class="wbs-journey-map__cta-{{ wbs_id }}">
+          <a href="{{ section.settings.cta_link }}" class="wbs-journey-map__cta-button-{{ wbs_id }}">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="wbs-journey-map__empty-state-{{ wbs_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <p>{{ section.settings.empty_state_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</wbs-journey-map-{{ wbs_id }}>
+
+<script>
+  (function() {
+    class JourneyMap{{ wbs_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.stages = this.querySelectorAll('[data-stage]');
+        this.observerOptions = {
+          threshold: 0.2,
+          rootMargin: '0px 0px -100px 0px'
+        };
+      }
+
+      connectedCallback() {
+        this.setupIntersectionObserver();
+      }
+
+      setupIntersectionObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, index * {{ section.settings.animation_delay }});
+              observer.unobserve(entry.target);
+            }
+          });
+        }, this.observerOptions);
+
+        this.stages.forEach(stage => {
+          observer.observe(stage);
+        });
+      }
+    }
+
+    customElements.define('wbs-journey-map-{{ wbs_id }}', JourneyMap{{ wbs_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Story Timeline",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Product Journey"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Discover the story behind every product we create</p>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "empty_state_text",
+      "label": "Empty state text",
+      "default": "Add stages to create your product journey"
+    },
+    {
+      "type": "header",
+      "content": "Stage 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_1_label",
+      "label": "Label",
+      "default": "Step 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_1_title",
+      "label": "Title",
+      "default": "Idea"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_1_description",
+      "label": "Description",
+      "default": "<p>Every great product starts with a spark of inspiration and a vision to create something meaningful.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_1_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "lightbulb"
+    },
+    {
+      "type": "header",
+      "content": "Stage 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_2_label",
+      "label": "Label",
+      "default": "Step 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_2_title",
+      "label": "Title",
+      "default": "Design"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_2_description",
+      "label": "Description",
+      "default": "<p>Our talented designers bring ideas to life with careful attention to detail and aesthetics.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_2_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "pencil"
+    },
+    {
+      "type": "header",
+      "content": "Stage 3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_3_label",
+      "label": "Label",
+      "default": "Step 3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_3_title",
+      "label": "Title",
+      "default": "Production"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_3_description",
+      "label": "Description",
+      "default": "<p>Quality craftsmanship meets modern manufacturing to create products that last.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_3_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "cube"
+    },
+    {
+      "type": "header",
+      "content": "Stage 4"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_4_label",
+      "label": "Label",
+      "default": "Step 4"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_4_title",
+      "label": "Title",
+      "default": "Packaging"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_4_description",
+      "label": "Description",
+      "default": "<p>Thoughtfully packaged with sustainability in mind, ready to delight from the moment you receive it.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_4_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "gift"
+    },
+    {
+      "type": "header",
+      "content": "Stage 5"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_5_label",
+      "label": "Label",
+      "default": "Step 5"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_5_title",
+      "label": "Title",
+      "default": "Delivery"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_5_description",
+      "label": "Description",
+      "default": "<p>Fast and reliable shipping ensures your product arrives safely at your doorstep.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_5_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "truck"
+    },
+    {
+      "type": "header",
+      "content": "Stage 6"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_6_label",
+      "label": "Label",
+      "default": "Step 6"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stage_6_title",
+      "label": "Title",
+      "default": "You"
+    },
+    {
+      "type": "richtext",
+      "id": "stage_6_description",
+      "label": "Description",
+      "default": "<p>The final and most important step - bringing joy and value to your life every day.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "stage_6_image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "stage_6_icon",
+      "label": "Icon",
+      "options": [
+        { "value": "number", "label": "Number" },
+        { "value": "lightbulb", "label": "Lightbulb" },
+        { "value": "pencil", "label": "Pencil" },
+        { "value": "cube", "label": "Cube" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "check", "label": "Check" }
+      ],
+      "default": "heart"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cta_text",
+      "label": "Button text",
+      "default": "Explore Our Products"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "marker_size",
+      "min": 40,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Marker size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "1 / 1", "label": "Square (1:1)" },
+        { "value": "4 / 3", "label": "Landscape (4:3)" },
+        { "value": "16 / 9", "label": "Wide (16:9)" },
+        { "value": "3 / 4", "label": "Portrait (3:4)" }
+      ],
+      "default": "4 / 3"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "animation_delay",
+      "min": 0,
+      "max": 500,
+      "step": 50,
+      "unit": "ms",
+      "label": "Delay between stages",
+      "default": 150
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtext",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "timeline_start_color",
+      "label": "Timeline start",
+      "default": "#a42325"
+    },
+    {
+      "type": "color",
+      "id": "timeline_end_color",
+      "label": "Timeline end",
+      "default": "#780406"
+    },
+    {
+      "type": "color",
+      "id": "marker_color",
+      "label": "Marker background",
+      "default": "#a42325"
+    },
+    {
+      "type": "color",
+      "id": "marker_icon_color",
+      "label": "Marker icon",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "marker_ring_color",
+      "label": "Marker ring",
+      "default": "#f9e6e6"
+    },
+    {
+      "type": "color",
+      "id": "label_background",
+      "label": "Label background",
+      "default": "#f1f1f1"
+    },
+    {
+      "type": "color",
+      "id": "label_text_color",
+      "label": "Label text",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Background",
+      "default": "#a42325"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Hover background",
+      "default": "#780406"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Story Timeline"
+    }
+  ]
+}
+{% endschema %}
+
+```
+
+</details>
+
+## Story Timeline Shopify Section – Build a Powerful Brand Journey Experience
+
+**Story Timeline Shopify Section** is an effective way to visually communicate your brand’s journey, milestones, and values. Instead of presenting plain text on your About Us page, a timeline section allows you to tell your story step by step in a clean, engaging, and interactive format. This approach helps customers connect emotionally with your brand and builds long-term trust.
+
+### What is a Story Timeline Shopify Section?
+
+A Story Timeline Shopify Section is a custom Shopify section designed to display key stages of your brand or product journey in chronological order. Each stage usually includes a label, title, description, image, and icon. The alternating left-right layout, combined with animations, keeps users engaged as they scroll through your story.
+
+The section you’re using is a **fully customizable Liquid-based solution**, not a basic app. It utilizes dynamic settings from the Shopify theme editor, enabling merchants to update content without requiring code modifications.
+
+### How this custom code improves your Shopify store
+
+The provided Story Timeline Shopify Section code is well-structured and optimized for performance and flexibility. It uses:
+
+- Dynamic IDs (wbs_id) to prevent CSS and JS conflicts
+- Responsive grid layouts that adapt perfectly to mobile devices
+- Intersection Observer animations for smooth scroll-based reveals
+- Theme editor settings for colors, typography, spacing, icons, and images
+
+Each stage (up to six) can be enabled or disabled automatically based on content availability, ensuring the section never looks broken or empty.
+
+### Customization made easy
+
+Through the Shopify schema settings, store owners can easily manage:
+
+- Timeline headings and subheadings
+- Stage titles, descriptions, labels, and icons
+- Image aspect ratios and border radius
+- Timeline colors, marker size, and animation delays
+- Optional call-to-action button at the bottom
+
+This makes the Story Timeline Shopify Section ideal for non-technical users while still offering advanced design control for developers.
+
+### Final thoughts
+
+A well-designed Story Timeline Shopify Section turns your store into more than just a product catalog—it becomes a brand experience. With clean Liquid code, responsive design, and customizable settings, this timeline section is a powerful addition to any Shopify store focused on trust, transparency, and growth.
