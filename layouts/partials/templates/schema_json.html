@@ -7,6 +7,7 @@
 {{- $bc_list := (split $lang_url "/")}}
 
 {{- $scratch := newScratch }}
+{{- $scratch.Set "count" 0 }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,23 +19,23 @@
     {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
 
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
-    {{- if (and $index)}}, {{end }}
+    {{- if (gt ($scratch.Get "count") 0)}}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{ add 1 $index  }},
-      "name": {{ $bc_pg.Name }},
-      "item": {{ $bc_pg.Permalink | safeHTML }}
+      "position": {{ add 1 $index }},
+      "name": {{ $bc_pg.Name | jsonify }},
+      "item": {{ $bc_pg.Permalink | jsonify }}
     }
+    {{- $_ := $scratch.Add "count" 1 }}
     {{- end }}
 
   {{- end }}
-  {{- /*  self-page addition  */ -}}
-  {{- if (ge (len $bc_list) 2) }}, {{end }}
+  {{- if (gt ($scratch.Get "count") 0) }}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{len $bc_list}},
-      "name": {{ .Name }},
-      "item": {{ .Permalink | safeHTML }}
+      "position": {{ add ($scratch.Get "count") 1 }},
+      "name": {{ .Name | jsonify }},
+      "item": {{ .Permalink | jsonify }}
     }
   ]
 }
