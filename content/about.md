@@ -66,7 +66,7 @@ lastmod: 2026-06-16
 
 ## Work Experience
 
-**Founder & Lead Developer, [Creatify](#)** · Freelance · 2025 – Present
+**Founder & Lead Developer, [Creatify](https://www.instagram.com/crea8ify.online/)** · Freelance · 2025 – Present
 
 Running a Shopify-focused freelance agency delivering custom theme development, store design, and e-commerce solutions for clients in Pakistan and internationally. Services include Liquid development, theme customization, and end-to-end store builds.
 

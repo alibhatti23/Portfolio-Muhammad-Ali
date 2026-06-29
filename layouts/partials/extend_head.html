@@ -70,15 +70,15 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{ .Title }}",
-  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | truncate 160 | jsonify }}{{ end }},
   "url": "{{ .Permalink }}",
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-  "wordCount": "{{ .WordCount }}",
+  "wordCount": {{ .WordCount }},
   "inLanguage": "{{ .Language.Lang | default "en-us" }}",
   {{- with .Params.cover.image }}
-  "image": "{{ . | absURL }}",
+  "image": {{ . | absURL | jsonify }},
   {{- end }}
   "author": {
     "@id": "{{ site.BaseURL }}#person"
@@ -91,9 +91,9 @@
     "@id": "{{ .Permalink }}"
   }
   {{- with .Params.keywords }},
-  "keywords": [{{ range $i, $e := . }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}]
+  "keywords": {{ . | jsonify }}
   {{- else }}{{- with .Params.tags }},
-  "keywords": [{{ range $i, $e := . }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}]
+  "keywords": {{ . | jsonify }}
   {{- end }}{{- end }}
 }
 </script>
@@ -117,7 +117,7 @@
         "@type": "Website",
         "name": "Mage",
         "description": "Maje.ae is the official UAE e-commerce store for Maje Paris, a luxury Parisian womenswear brand. The store is built on Shopify using a fully customized Dawn theme, tailored to reflect the brand's premium, fashion-forward identity. The result is a clean, editorial-style shopping experience designed specifically for the UAE luxury market.",
-        "url": "https://www.maje.ae/",
+        "url": "https://www.maje.ae/"
 
       }
     },
@@ -128,7 +128,7 @@
         "@type": "WebSite",
         "name": "Rhode",
         "description": "Rhode Skin is Hailey Bieber's cult DTC beauty brand built on a fully custom Shopify theme. The store carries a soft, editorial aesthetic — warm cream tones, lowercase typography, and autoplay campaign videos that pull you straight into the brand world. The homepage is one immersive scroll with full-bleed imagery, horizontal product carousels, and inline Add to Cart buttons — no clutter, zero friction. Smart conversion features like Early Access login gates, waitlists, BNPL, and embedded press awards make it one of the most well-executed beauty Shopify stores on the market.",
-        "url": "https://www.rhodeskin.com/",
+        "url": "https://www.rhodeskin.com/"
       }
     },
     {
@@ -138,7 +138,7 @@
         "@type": "Website",
         "name": "Caliphe Clothing",
         "description": "A Pakistani activewear and fashion brand built on a fully customized Shopify Dawn theme. The store opens with a full-width autoplay video hero 'Performance Meets Style, Built for Movement.'",
-        "url": "https://calipheclothing.com/",
+        "url": "https://calipheclothing.com/"
       
       }
     },
