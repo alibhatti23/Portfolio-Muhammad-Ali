@@ -10,48 +10,78 @@
 :where(:lang(ur), [lang="ur"], [lang|="ur"], .urdu),
 :where(:lang(ur), [lang="ur"], [lang|="ur"], .urdu) :not(code):not(pre):not(kbd):not(samp) {
   font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
-  font-optical-sizing: auto;
-  line-height: 2.4;
+  line-height: 3.2;
   direction: rtl;
   text-align: right;
   unicode-bidi: plaintext;
+  overflow: visible;
 }
 
-/* Post content in Urdu — bigger, more breathing room */
+/* ── Urdu post body ── */
+.urdu-post {
+  direction: rtl;
+  text-align: right;
+  overflow: visible;
+}
+
+.urdu-post p,
+.urdu-post li,
+.urdu-post blockquote {
+  font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
+  font-size: 1.3rem;
+  line-height: 3.6;
+  direction: rtl;
+  text-align: right;
+  overflow: visible;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.urdu-post h1,
+.urdu-post h2,
+.urdu-post h3,
+.urdu-post h4 {
+  font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 3;
+  overflow: visible;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.urdu-post strong,
+.urdu-post b {
+  font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
+  line-height: 3.6;
+  overflow: visible;
+}
+
+/* Make sure Hugo's post-content wrapper doesn't clip */
 .urdu-post .post-content,
-.urdu-post .post-content p {
-  font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
-  font-size: 1.25rem;
-  line-height: 2.6;
-  direction: rtl;
-  text-align: right;
+.urdu-post ~ .post-content {
+  overflow: visible !important;
 }
 
-.urdu-post .post-content h1,
-.urdu-post .post-content h2,
-.urdu-post .post-content h3 {
-  font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
-  direction: rtl;
-  text-align: right;
-  line-height: 2;
-}
-
+/* Post title & description when Urdu */
 .post-title.urdu {
   font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
-  font-size: clamp(24px, 4vw, 34px);
-  line-height: 1.8;
+  font-size: clamp(22px, 4vw, 32px);
+  line-height: 2.2;
   margin-top: 12px;
   margin-bottom: 24px;
   direction: rtl;
   text-align: right;
+  overflow: visible;
 }
 
 .post-description.urdu {
   font-family: "Mehr Nastaliq Web", "Noto Nastaliq Urdu", serif;
   margin-top: 6px;
-  line-height: 2;
+  line-height: 2.4;
   direction: rtl;
   text-align: right;
+  overflow: visible;
 }
 
 .post-meta.urdu,
