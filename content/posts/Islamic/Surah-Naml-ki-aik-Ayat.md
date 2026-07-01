@@ -34,8 +34,11 @@ keywords:
   - Quran study
   - Urdu Islamic content
 author: Muhammad Ali Sajid
+authorUr: "محمد علی سجاد"
+textLang: ur
 showtoc: false
 ShowReadingTime: true
+ShowWordCount: true
 ---
 
 <div class="urdu-post" lang="ur" dir="rtl">
