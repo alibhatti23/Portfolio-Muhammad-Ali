@@ -8,8 +8,8 @@
 .urdu-post li,
 .urdu-post blockquote {
   font-family: "Noto Nastaliq Urdu", serif;
-  font-size: 1.25rem;
-  line-height: 3.8;
+  font-size: 1rem;
+  line-height: 3.4;
   direction: rtl;
   text-align: right;
   overflow: visible;
