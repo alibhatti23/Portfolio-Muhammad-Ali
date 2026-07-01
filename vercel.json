@@ -1,14 +1,9 @@
 {
+  "buildCommand": "hugo --gc --minify",
+  "outputDirectory": "public",
   "build": {
     "env": {
       "HUGO_VERSION": "0.163.2"
     }
-  },
-  "buildCommand": "hugo --gc --minify",
-  "rewrites": [
-    { "source": "/api/chat", "destination": "/api/chat.js" },
-    { "source": "/api/health", "destination": "/api/health.js" },
-    { "source": "/api/ping", "destination": "/api/ping.js" },
-    { "source": "/personal", "destination": "/api/personal.js" }
-  ]
+  }
 }
