@@ -41,26 +41,21 @@ Muhammad Ali Sajid is a Shopify Developer and co-founder of Creatify, a freelanc
 - WhatsApp: wa.me/923123626704
 - Resume: alibhatti.me/Muhammad-Ali-Sajid-Resume.pdf
 
-## Certifications
-
-Holds 21+ certifications including: AWS, Meta, Google, IBM, GitHub, UC Berkeley, HackerRank, DeepLearning.AI
-
 ## Behavior Guidelines
 
 - Be friendly, professional, and concise
 - Answer questions about Muhammad Ali's skills, projects, experience, availability, and how to hire him
 - If asked something you don't know about him, say so honestly rather than guessing
 - Encourage visitors to reach out via email or WhatsApp for project inquiries
-- Do NOT discuss unrelated topics (politics, other people's personal info, etc.)
-- Keep responses focused and helpful — this is a portfolio chatbot, not a general assistant
-- If asked about pricing or availability for projects, say rates are discussed on a per-project basis and to reach out directly`;
+- Do NOT discuss unrelated topics
+- If asked about pricing, say rates are discussed on a per-project basis and to reach out directly`;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return res.status(500).json({ error: 'API key not configured' });
   }
@@ -69,38 +64,38 @@ export default async function handler(req, res) {
   if (!message || typeof message !== 'string' || message.trim().length === 0) {
     return res.status(400).json({ error: 'Message is required' });
   }
-
   if (message.length > 2000) {
     return res.status(400).json({ error: 'Message too long' });
   }
 
-  const messages = [
+  // Build Gemini contents array (history + current message)
+  const contents = [
     ...history.slice(-10).map((m) => ({
-      role: m.role,
-      content: m.content,
+      role: m.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: m.content }],
     })),
-    { role: 'user', content: message.trim() },
+    { role: 'user', parts: [{ text: message.trim() }] },
   ];
 
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse&key=${apiKey}`;
+
   try {
-    const upstream = await fetch('https://api.openai.com/v1/chat/completions', {
+    const upstream = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'gpt-3.5-turbo',
-        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
-        stream: true,
-        max_tokens: 1024,
-        temperature: 0.7,
+        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents,
+        generationConfig: {
+          maxOutputTokens: 1024,
+          temperature: 0.7,
+        },
       }),
     });
 
     if (!upstream.ok) {
       const err = await upstream.json().catch(() => ({}));
-      console.error('OpenAI error:', JSON.stringify(err));
+      console.error('Gemini error:', JSON.stringify(err));
       const msg = err?.error?.message || 'AI service error. Please try again.';
       return res.status(502).json({ error: msg });
     }
@@ -126,14 +121,11 @@ export default async function handler(req, res) {
         if (!trimmed.startsWith('data: ')) continue;
 
         const data = trimmed.slice(6);
-        if (data === '[DONE]') {
-          res.write('data: [DONE]\n\n');
-          continue;
-        }
+        if (data === '[DONE]') continue;
 
         try {
           const parsed = JSON.parse(data);
-          const text = parsed.choices?.[0]?.delta?.content;
+          const text = parsed?.candidates?.[0]?.content?.parts?.[0]?.text;
           if (text) {
             res.write(`data: ${JSON.stringify({ text })}\n\n`);
           }
@@ -143,6 +135,7 @@ export default async function handler(req, res) {
       }
     }
 
+    res.write('data: [DONE]\n\n');
     res.end();
   } catch (err) {
     console.error('Chat handler error:', err);
