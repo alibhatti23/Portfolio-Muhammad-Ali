@@ -90,7 +90,7 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4o',
+        model: 'gpt-3.5-turbo',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
         stream: true,
         max_tokens: 1024,
@@ -100,8 +100,9 @@ export default async function handler(req, res) {
 
     if (!upstream.ok) {
       const err = await upstream.json().catch(() => ({}));
-      console.error('OpenAI error:', err);
-      return res.status(502).json({ error: 'AI service error. Please try again.' });
+      console.error('OpenAI error:', JSON.stringify(err));
+      const msg = err?.error?.message || 'AI service error. Please try again.';
+      return res.status(502).json({ error: msg });
     }
 
     res.setHeader('Content-Type', 'text/event-stream');
