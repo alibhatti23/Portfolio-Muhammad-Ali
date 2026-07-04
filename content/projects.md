@@ -166,13 +166,95 @@ hideMeta: true
     grid-template-columns: 1fr;
   }
 }
+.type-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.type-btn {
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--entry);
+  color: var(--primary);
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.type-btn:hover, .type-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.filter-bar.hidden { display: none; }
+.finance-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.finance-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finance-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.finance-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.finance-badge {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-weight: 500;
+}
+.finance-desc {
+  font-size: 0.83rem;
+  color: var(--primary);
+  line-height: 1.55;
+  margin: 0 0 0.5rem;
+}
+.project-visit-gh svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
 </style>
 
 <div class="projects-header">
-  <p>26 Shopify stores built & customized — fashion, beauty, skincare, tech, and more.</p>
+  <p>26 Shopify stores + 4 Finance &amp; Analytics projects — Shopify Liquid, Excel, Power BI.</p>
 </div>
 
-<div class="filter-bar">
+<div class="type-bar">
+  <button class="type-btn active" data-type="all">All Projects</button>
+  <button class="type-btn" data-type="shopify">Shopify Stores</button>
+  <button class="type-btn" data-type="finance">Finance &amp; Analytics</button>
+</div>
+
+<div class="filter-bar" id="categoryFilters">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="cloth">Cloth</button>
   <button class="filter-btn" data-filter="skin-care">Skin Care</button>
@@ -641,13 +723,96 @@ hideMeta: true
     </div>
   </div>
 
+  <div class="project-card" data-type="finance" data-category="finance">
+    <div class="project-preview finance-preview" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d6a9f 100%);">
+      <div class="finance-icon">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <div class="finance-tools">
+        <span class="finance-badge">Power BI</span>
+        <span class="finance-badge">Excel</span>
+        <span class="finance-badge">DAX</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3>Finance KPIs Dashboard</h3>
+      <span class="project-category">Finance &amp; Analytics</span>
+      <p class="finance-desc">Real-time Power BI + Excel dashboard tracking revenue, expenses, profit margins, cash flow, and growth trends for business decision-making.</p>
+      <a class="project-visit" href="https://github.com/alibhatti23/Finance_KPIs_Dashboard" target="_blank" rel="noopener noreferrer">
+        View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-type="finance" data-category="finance">
+    <div class="project-preview finance-preview" style="background: linear-gradient(135deg, #1a5c3a 0%, #2d9e6b 100%);">
+      <div class="finance-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <div class="finance-tools">
+        <span class="finance-badge">Excel</span>
+        <span class="finance-badge">Scenario Analysis</span>
+        <span class="finance-badge">Forecasting</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3>Budget &amp; Forecasting Model</h3>
+      <span class="project-category">Finance &amp; Analytics</span>
+      <p class="finance-desc">Excel-based financial planning system with scenario analysis, budgeting, and revenue forecasting — built for real business use.</p>
+      <a class="project-visit" href="https://github.com/alibhatti23/Budget-Forcasting-Model" target="_blank" rel="noopener noreferrer">
+        View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-type="finance" data-category="finance">
+    <div class="project-preview finance-preview" style="background: linear-gradient(135deg, #4a1c6b 0%, #8b38c2 100%);">
+      <div class="finance-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="finance-tools">
+        <span class="finance-badge">Power BI</span>
+        <span class="finance-badge">Excel</span>
+        <span class="finance-badge">Sales Analytics</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3>Sales Performance Analytics</h3>
+      <span class="project-category">Finance &amp; Analytics</span>
+      <p class="finance-desc">Visualizes business metrics including revenue, profit, expenses, sales trends, and top-performing products across time periods.</p>
+      <a class="project-visit" href="https://github.com/alibhatti23/Sales-Performance-Analytics-Dashboard" target="_blank" rel="noopener noreferrer">
+        View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-type="finance" data-category="finance">
+    <div class="project-preview finance-preview" style="background: linear-gradient(135deg, #7a3500 0%, #d4620a 100%);">
+      <div class="finance-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="finance-tools">
+        <span class="finance-badge">Excel</span>
+        <span class="finance-badge">Bookkeeping</span>
+        <span class="finance-badge">P&amp;L</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3>Small Business Bookkeeping System</h3>
+      <span class="project-category">Finance &amp; Analytics</span>
+      <p class="finance-desc">Structured bookkeeping system for tracking income, expenses, cash flow, and P&amp;L statements — designed for small business owners.</p>
+      <a class="project-visit" href="https://github.com/alibhatti23/Business-Bookkeeping-System" target="_blank" rel="noopener noreferrer">
+        View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <script>
 (function() {
-  const CONTAINER_H = 260; // must match .project-preview height in CSS
+  const CONTAINER_H = 260;
 
-  // Set dynamic scroll amount per image once loaded
   document.querySelectorAll('.project-preview img').forEach(img => {
     const apply = () => {
       const naturalH = img.naturalHeight;
@@ -664,32 +829,62 @@ hideMeta: true
     else img.addEventListener('load', apply);
   });
 
-  const btns = document.querySelectorAll('.filter-btn');
+  const typeBtns = document.querySelectorAll('.type-btn');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const categoryFilters = document.getElementById('categoryFilters');
   const cards = document.querySelectorAll('.project-card');
   const grid = document.getElementById('projectGrid');
 
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      let visible = 0;
-      cards.forEach(card => {
-        const match = filter === 'all' || card.dataset.category === filter;
-        card.style.display = match ? 'flex' : 'none';
-        if (match) visible++;
-      });
-      let noResult = grid.querySelector('.no-results');
-      if (visible === 0) {
-        if (!noResult) {
-          noResult = document.createElement('p');
-          noResult.className = 'no-results';
-          noResult.textContent = 'No projects in this category yet.';
-          grid.appendChild(noResult);
-        }
-      } else if (noResult) {
-        noResult.remove();
+  let currentType = 'all';
+  let currentCategory = 'all';
+
+  function updateGrid() {
+    let visible = 0;
+    cards.forEach(card => {
+      const cardType = card.dataset.type || 'shopify';
+      const cardCategory = card.dataset.category || '';
+      const typeMatch = currentType === 'all' || cardType === currentType;
+      const catMatch = currentCategory === 'all' || cardCategory === currentCategory;
+      const show = typeMatch && catMatch;
+      card.style.display = show ? 'flex' : 'none';
+      if (show) visible++;
+    });
+    let noResult = grid.querySelector('.no-results');
+    if (visible === 0) {
+      if (!noResult) {
+        noResult = document.createElement('p');
+        noResult.className = 'no-results';
+        noResult.textContent = 'No projects in this category yet.';
+        grid.appendChild(noResult);
       }
+    } else if (noResult) {
+      noResult.remove();
+    }
+  }
+
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentType = btn.dataset.type;
+      if (currentType === 'finance') {
+        categoryFilters.classList.add('hidden');
+      } else {
+        categoryFilters.classList.remove('hidden');
+      }
+      currentCategory = 'all';
+      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns[0].classList.add('active');
+      updateGrid();
+    });
+  });
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCategory = btn.dataset.filter;
+      updateGrid();
     });
   });
 })();
