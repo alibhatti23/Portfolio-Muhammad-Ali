@@ -17,7 +17,7 @@ menu:
       weight: 20
     - identifier: Achievements
       name: Achievements
-      url: /achievements/
+      url: /Achievements/
       weight: 30
     - identifier: blog
       name: Blog
