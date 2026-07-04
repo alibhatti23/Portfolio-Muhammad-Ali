@@ -16,7 +16,7 @@ menu:
       url: /projects/
       weight: 20
     - identifier: certifications
-      name: Certs
+      name: Achievements
       url: /certifications/
       weight: 30
     - identifier: blog
@@ -67,10 +67,10 @@ minify:
 params:
   env: production
   keywords: [Muhammad Ali Sajid, Affiliate Financial Accountant, Web Developer, Portfolio, Blog, React, Next.js, Excel, liquid, Pakistan]
-  description: "Muhammad Ali Sajid - Affiliate Financial Accountant & Web Developer. Building innovative web applications, open-source projects, and sharing knowledge through Blogs."
+  description: "Muhammad Ali Sajid - Shopify Developer & Co-founder of Creatify. Building custom Shopify stores for international brands. BS Accounting & Finance student, CMA in progress."
   author: "Muhammad Ali Sajid"
-  title: Muhammad Ali Sajid | Affiliate Financial Accountant
-  seoTitle: Muhammad Ali Sajid - Affiliate Financial Accountant
+  title: Muhammad Ali Sajid | Shopify Developer & Accountant
+  seoTitle: Muhammad Ali Sajid - Shopify Developer & Co-founder of Creatify
   defaultTheme: auto
   images: ["/assets/opengraph.webp"]
   label:
@@ -78,7 +78,7 @@ params:
   profileMode:
     enabled: true
     title: "Muhammad Ali Sajid" # optional default will be site title
-    subtitle: "Affiliate Financial Accountant & Web Developer"
+    subtitle: "Shopify Developer · Co-founder of Creatify · BS Accounting & Finance"
     imageUrl: "/assets/profile-1.webp" # Ensure this file exists
     imageTitle: "Muhammad Ali Sajid - Affiliate Financial Accountant from Pakistan"
     imageWidth: 120 # custom size
