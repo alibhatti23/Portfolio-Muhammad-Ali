@@ -82,7 +82,7 @@ hideMeta: true
   will-change: transform;
 }
 .project-card:hover .project-preview img {
-  transform: translateY(-66%);
+  transform: translateY(var(--scroll-amount, -60%));
 }
 .project-preview-overlay {
   position: absolute;
@@ -645,6 +645,25 @@ hideMeta: true
 
 <script>
 (function() {
+  const CONTAINER_H = 260; // must match .project-preview height in CSS
+
+  // Set dynamic scroll amount per image once loaded
+  document.querySelectorAll('.project-preview img').forEach(img => {
+    const apply = () => {
+      const naturalH = img.naturalHeight;
+      const renderedH = img.offsetWidth * (naturalH / img.naturalWidth);
+      if (renderedH > CONTAINER_H) {
+        const scrollPx = renderedH - CONTAINER_H;
+        const scrollPct = (scrollPx / renderedH) * 100;
+        img.style.setProperty('--scroll-amount', `-${scrollPct.toFixed(1)}%`);
+      } else {
+        img.style.setProperty('--scroll-amount', '0%');
+      }
+    };
+    if (img.complete && img.naturalHeight > 0) apply();
+    else img.addEventListener('load', apply);
+  });
+
   const btns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.project-card');
   const grid = document.getElementById('projectGrid');
