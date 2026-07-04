@@ -1,6 +1,6 @@
 ﻿---
 title: "Projects"
-description: “Shopify stores built and customized by Muhammad Ali Sajid — spanning fashion, beauty, skincare, footwear, tech, and more across international and Pakistani markets.”
+description: “Shopify stores built and customized by Muhammad Ali Sajid - spanning fashion, beauty, skincare, footwear, tech, and more across international and Pakistani markets.”
 keywords: [Projects, Shopify, Portfolio, Liquid, E-commerce, Custom Theme, Pakistan, International]
 lastmod: 2026-07-04
 showtoc: false

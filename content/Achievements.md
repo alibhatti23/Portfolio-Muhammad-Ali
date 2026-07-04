@@ -197,9 +197,9 @@ hideMeta: true
     </div>
     <div class="ach-body">
       <h3>Self-Taught Shopify Developer — Zero to International Clients</h3>
-      <p>No bootcamp, no formal course. Taught myself Shopify Liquid, Dawn theme architecture, section schema, and CRO techniques entirely through documentation, real projects, and iteration. Went from zero knowledge to building production storefronts for international fashion and beauty brands — all within a single year.</p>
+      <p>No bootcamp, no formal course. Taught myself Shopify Liquid, Dawn theme architecture, section schema, and CRO techniques entirely through documentation, real projects, and iteration. Went from zero knowledge to building production storefronts for international fashion and beauty brands. </p>
       <div class="ach-meta">
-        <span class="ach-date">2025</span>
+        <span class="ach-date">2024</span>
         <span class="ach-tag">Self-Taught</span>
         <span class="ach-tag">Liquid</span>
         <span class="ach-tag">CRO</span>
@@ -212,8 +212,8 @@ hideMeta: true
       <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
     </div>
     <div class="ach-body">
-      <h3>Published 15+ Technical Guides on Shopify & SEO</h3>
-      <p>Written and published 15+ in-depth technical tutorials covering Shopify development (custom sections, price sliders, abandon cart, social embeds, collaborative access), SEO strategy, HTML5, Excel, and automation with N8N — helping developers and store owners solve real, practical problems.</p>
+      <h3>Published Technical Guides on Shopify & SEO</h3>
+      <p>Written and published Guides in-depth technical tutorials covering Shopify development (custom sections, price sliders, abandon cart, social embeds, collaborative access), SEO strategy, HTML5, Excel, and automation with N8N — helping developers and store owners solve real, practical problems.</p>
       <div class="ach-meta">
         <span class="ach-date">2025 – Present</span>
         <span class="ach-tag">Technical Writing</span>
