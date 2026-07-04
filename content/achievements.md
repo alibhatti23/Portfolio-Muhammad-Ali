@@ -209,8 +209,8 @@ hideMeta: true
       <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
     </div>
     <div class="ach-body">
-      <h3>Published 15+ Technical Guides on Shopify &amp; SEO</h3>
-      <p>Written and published 15+ in-depth technical tutorials covering Shopify development (custom sections, price sliders, abandon cart, social embeds, collaborative access), SEO strategy, HTML5, Excel, and automation with N8N -- helping developers and store owners solve real problems.</p>
+      <h3>Published Technical Guides on Shopify &amp; SEO</h3>
+      <p>Written and published in-depth technical tutorials covering Shopify development (custom sections, price sliders, abandon cart, social embeds, collaborative access), SEO strategy, HTML5, Excel, and automation with N8N -- helping developers and store owners solve real problems. <a href="/posts/">Read all articles &rarr;</a></p>
       <div class="ach-meta">
         <span class="ach-date">2025 -- Present</span>
         <span class="ach-tag">Technical Writing</span>
