@@ -2,7 +2,7 @@
 title: "Achievements"
 description: "Muhammad Ali Sajid's professional achievements spanning Shopify development, freelance agency founding, finance projects, and academic milestones."
 keywords: [Muhammad Ali Sajid, Achievements, Shopify Developer, Creatify, BZU, CMA, AFA, Freelance, Pakistan, Finance]
-lastmod: 2026-07-05
+lastmod: 2026-07-04
 slug: achievements
 showtoc: false
 searchHidden: true
