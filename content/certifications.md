@@ -288,13 +288,13 @@ hideMeta: true
       <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
     </div>
     <div class="ach-body">
-      <h3>Pursuing CMA — Certified Management Accountant</h3>
-      <p>Actively pursuing the CMA (Certified Management Accountant) — a globally recognized credential in management accounting, financial strategy, and decision analysis. The CMA program covers financial planning, performance management, cost management, internal controls, and professional ethics. In progress alongside university studies and freelance operations.</p>
+      <h3>AFA — Affiliate Financial Accountant (CMA Pathway)</h3>
+      <p>Started the CMA (Certified Management Accountant) journey in 2023. After completing 12 papers, officially earned the AFA (Affiliate Financial Accountant) designation — a professional accounting credential recognized within the CMA pathway. Now 17 papers completed and actively continuing toward full CMA certification. The program covers financial planning, performance management, cost accounting, internal controls, and professional ethics.</p>
       <div class="ach-meta">
-        <span class="ach-date">2023 – Present</span>
-        <span class="ach-tag">CMA</span>
-        <span class="ach-tag">Management Accounting</span>
-        <span class="ach-tag">Global Certification</span>
+        <span class="ach-date">2023 – Present · 17 Papers Completed</span>
+        <span class="ach-tag">AFA</span>
+        <span class="ach-tag">CMA Pathway</span>
+        <span class="ach-tag">Professional Designation</span>
       </div>
     </div>
   </div>
