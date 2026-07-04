@@ -19,7 +19,7 @@ ShowShareButtons: false
 }
 .tools-page-sub {
   font-size: 1rem;
-  color: var(--secondary);
+  color: var(--primary);
   margin: 0 0 2rem;
   line-height: 1.6;
 }

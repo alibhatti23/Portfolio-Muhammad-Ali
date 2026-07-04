@@ -42,10 +42,16 @@ function setCache(key, value) {
   responseCache.set(key, { value, ts: Date.now() });
 }
 
-const GREETINGS = new Set(['hi', 'hello', 'hey', 'salam', 'assalam', 'assalamu', 'السلام', 'helo', 'hii', 'hiii', 'yo', 'sup', 'howdy']);
+const GREETINGS = new Set([
+  'hi', 'hello', 'hey', 'salam', 'salaam', 'assalam', 'assalamu', 'السلام',
+  'helo', 'hii', 'hiii', 'yo', 'sup', 'howdy', 'hola', 'hy', 'hye',
+  'good morning', 'goodmorning', 'good evening', 'good afternoon', 'good day',
+  'hey there', 'hi there', 'hello there', 'whats up', "what's up", 'wassup',
+  'greetings', 'namaste', 'bonjour', 'ahoy'
+]);
 function isGreeting(msg) {
-  const normalized = msg.trim().toLowerCase().replace(/[!?.،,]+$/, '');
-  return GREETINGS.has(normalized) || normalized.length < 6 && GREETINGS.has(normalized);
+  const normalized = msg.trim().toLowerCase().replace(/[!?.،,،]+$/, '').trim();
+  return GREETINGS.has(normalized);
 }
 
 const SYSTEM_PROMPT = `You are an AI assistant representing Muhammad Ali Sajid on his personal portfolio website (alibhatti.me). You speak on his behalf — use first person when appropriate. Your job is to help visitors understand who Muhammad Ali is, what he does, his projects, skills, and how to hire or contact him. Be warm, professional, and confident.
@@ -205,13 +211,22 @@ const SYSTEM_PROMPT = `You are an AI assistant representing Muhammad Ali Sajid o
 ## BEHAVIOR RULES
 
 - Speak in first person as Muhammad Ali ("I build...", "My agency...", "I've worked with...")
-- Be friendly, professional, and confident — not robotic
+- Be friendly, professional, and confident — not robotic or corporate
 - For pricing: always say rates are project-based and to reach out via email or WhatsApp
 - For hiring: encourage contact at m.alibhatti1465@gmail.com or WhatsApp wa.me/923123626704
 - If asked something you genuinely don't know, say so honestly — never guess
-- Do NOT help with unrelated topics (general programming, politics, other people's work)
-- Keep responses concise (under 150 words) unless the visitor asks for details
-- For project links, include the live URL when available`;
+- Do NOT help with unrelated topics (general programming tutorials, politics, other people's work)
+- Keep responses concise (under 150 words) unless the visitor explicitly asks for more details
+- For project links, include the live URL when available
+
+## FORMATTING RULES
+
+- Use **bold** for important terms, names, or links
+- Use bullet lists when listing multiple items — never write a wall of text
+- Keep paragraphs short (2-3 sentences max)
+- When sharing contact info, format it clearly so it's easy to act on
+- Don't use headers (## or ###) in responses — they look wrong in a chat bubble
+- Emoji are fine sparingly (max 1-2 per response), but not required`;
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -242,7 +257,17 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
-    const greeting = "Assalamu Alaikum! 👋 I'm Ali's AI assistant. Ask me anything about Muhammad Ali Sajid — his Shopify work, skills, projects, or how to get in touch!";
+    const greeting = `Assalamu Alaikum! 👋 I'm Ali's AI assistant — happy to answer any questions about Muhammad Ali Sajid.
+
+Here's what I can help with:
+
+- **Shopify work** — stores built, tech stack, custom theme development
+- **Creatify** — the freelance agency Ali co-founded in 2025
+- **Finance projects** — Excel & Power BI dashboards on GitHub
+- **Hiring Ali** — services, process, and how to get in touch
+- **Background** — AFA credential, BZU degree, blog posts
+
+What would you like to know?`;
     res.write(`data: ${JSON.stringify({ text: greeting })}\n\n`);
     res.write('data: [DONE]\n\n');
     return res.end();
@@ -284,8 +309,8 @@ export default async function handler(req, res) {
         system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
         contents,
         generationConfig: {
-          maxOutputTokens: 512,
-          temperature: 0.7,
+          maxOutputTokens: 650,
+          temperature: 0.72,
           topP: 0.9,
         },
         safetySettings: [
