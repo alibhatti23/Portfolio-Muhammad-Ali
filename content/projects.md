@@ -1,8 +1,8 @@
 ---
 title: "Projects"
-description: "Here are some of my projects: I’ve worked on building Shopify-based eCommerce solutions, custom landing pages, and frontend-focused web experiences using Liquid, JavaScript, React, and modern styling frameworks."
-keywords: [Projects, Portfolio, Liquid, HTML, CSS, CRO, E-commerce Development, React, Business Analysis, Finance, Auditing]
-lastmod: 2026-06-16
+description: "Shopify stores built and customized by Muhammad Ali Sajid — spanning fashion, beauty, skincare, footwear, tech, and more across international and Pakistani markets."
+keywords: [Projects, Shopify, Portfolio, Liquid, E-commerce, Custom Theme, Pakistan, International]
+lastmod: 2026-07-04
 showtoc: false
 searchHidden: true
 ShowRssButtonInSectionTermList: false
@@ -11,249 +11,667 @@ hideMeta: true
 ---
 
 <style>
+.projects-header {
+  margin-bottom: 2rem;
+}
+.projects-header p {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.filter-btn {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--entry);
+  color: var(--primary);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 .project-card {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--border);
   background: var(--entry);
-  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--code-block-border, var(--border));
 }
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
+.project-preview {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+.project-preview a {
   display: block;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  text-decoration: none;
 }
-.project-card-info {
-  padding: 1.25rem;
+.project-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0);
+  will-change: transform;
+}
+.project-card:hover .project-preview img {
+  transform: translateY(-66%);
+}
+.project-preview-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card:hover .project-preview-overlay {
+  opacity: 1;
+}
+.scroll-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  letter-spacing: 0.03em;
+}
+.project-card:hover .scroll-hint {
+  opacity: 1;
+}
+.project-info {
+  padding: 1rem 1.1rem 1.1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.project-card-info h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.15rem;
+.project-info h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
-.project-card-info p {
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
-  color: var(--muted-foreground);
-  line-height: 1.5;
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-.project-tags span {
+.project-category {
+  display: inline-block;
   font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
-  background: var(--secondary);
-  color: var(--secondary-foreground);
+  padding: 0.15rem 0.55rem;
   border-radius: 4px;
+  background: var(--code-bg, rgba(0,0,0,0.06));
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
 }
-.project-links {
-  display: flex;
-  gap: 0.75rem;
+.project-visit {
   margin-top: auto;
-}
-.project-links a {
-  font-size: 0.85rem;
-  color: var(--primary);
-  text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.3rem;
+  font-size: 0.85rem;
   font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
 }
-.project-links a:hover {
+.project-visit:hover {
   text-decoration: underline;
+}
+.project-visit svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--secondary);
+  padding: 3rem 0;
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
-<div class="project-grid">
-
-<div class="project-card">
-<img src="/assets/projects/mage.webp" alt="Mage: Maje.ae is the official UAE e-commerce store for Maje Paris, a luxury Parisian womenswear brand. The store is built on Shopify using a fully customized Dawn theme, tailored to reflect the brand's premium, fashion-forward identity. The result is a clean, editorial-style shopping experience designed specifically for the UAE luxury market.">
-<div class="project-card-info">
-<h3>Mage</h3>
-<p>Maje.ae is the official UAE e-commerce store for Maje Paris, a luxury Parisian womenswear brand. The store is built on Shopify using a fully customized Dawn theme, tailored to reflect the brand's premium, fashion-forward identity. The result is a clean, editorial-style shopping experience designed specifically for the UAE luxury market.</p>
-<div class="project-tags">
-<span>Shopify</span>
-<span>Dawn Theme</span>
-<span>Liquid</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>Mega menu</span>
-<span>UAE</span>
-</div>
-<div class="project-links">
-<a href="https://www.maje.ae/" target="_blank" rel="noopener noreferrer">Website</a>
-</div>
-</div>
+<div class="projects-header">
+  <p>26 Shopify stores built & customized — fashion, beauty, skincare, tech, and more.</p>
 </div>
 
-<div class="project-card">
-<img src="/assets/projects/rhode.webp" alt="rhode: Rhode Skin is Hailey Bieber's cult DTC beauty brand built on a fully custom Shopify theme. The store carries a soft, editorial aesthetic — warm cream tones, lowercase typography, and autoplay campaign videos that pull you straight into the brand world. The homepage is one immersive scroll with full-bleed imagery, horizontal product carousels, and inline Add to Cart buttons — no clutter, zero friction. Smart conversion features like Early Access login gates, waitlists, BNPL, and embedded press awards make it one of the most well-executed beauty Shopify stores on the market.">
-<div class="project-card-info">
-<h3>Rhode</h3>
-<p>Rhode Skin is Hailey Bieber's cult DTC beauty brand built on a fully custom Shopify theme. The store carries a soft, editorial aesthetic — warm cream tones, lowercase typography, and autoplay campaign videos that pull you straight into the brand world. The homepage is one immersive scroll with full-bleed imagery, horizontal product carousels, and inline Add to Cart buttons — no clutter, zero friction. Smart conversion features like Early Access login gates, waitlists, BNPL, and embedded press awards make it one of the most well-executed beauty Shopify stores on the market.</p>
-<div class="project-tags">
-<span>Shopify</span>
-<span>Custom Theme</span>
-<span>Liquid</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>DTC</span>
-<span>Beauty</span>
-</div>
-<div class="project-links">
-<a href="https://www.rhodeskin.com/" target="_blank" rel="noopener noreferrer">Website</a>
-</div>
-</div>
-</div>
-
-<div class="project-card">
-<img src="/assets/projects/caliphe-clothing.webp" alt="calipheclothing:  a Pakistani activewear and 
-fashion brand built on a fully customized Shopify Dawn theme. The store opens with a full-width autoplay 
-video hero — "Performance Meets Style, Built for Movement.">
-<div class="project-card-info">
-<h3>Caliphe Clothing</h3>
-<p> A Pakistani activewear and fashion brand built on a fully customized Shopify Dawn theme. The store opens with a full-width autoplay video hero "Performance Meets Style, Built for Movement.</p>
-<div class="project-tags">
-<span>Shopify</span>
-<span>Liquid</span>
-<span>HTML</span>
-<span>JavaScript</span>
-<span>CSS</span>
-<span>Activewear</span>
-<span>E-Commerce</span>
-</div>
-<div class="project-links">
-<a href="https://calipheclothing.com/" target="_blank" rel="noopener noreferrer">Website</a>
-</div>
-</div>
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="cloth">Cloth</button>
+  <button class="filter-btn" data-filter="skin-care">Skin Care</button>
+  <button class="filter-btn" data-filter="footwear">Footwear</button>
+  <button class="filter-btn" data-filter="coffee">Coffee</button>
+  <button class="filter-btn" data-filter="streetwear">Streetwear</button>
+  <button class="filter-btn" data-filter="hair-care">Hair Care</button>
+  <button class="filter-btn" data-filter="supplement">Supplement</button>
+  <button class="filter-btn" data-filter="fragrance">Fragrance</button>
+  <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+  <button class="filter-btn" data-filter="pet">Pet</button>
+  <button class="filter-btn" data-filter="home-decor">Home Decor</button>
+  <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+  <button class="filter-btn" data-filter="apparel">Apparel</button>
+  <button class="filter-btn" data-filter="baby">Baby</button>
+  <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+  <button class="filter-btn" data-filter="bags">Bags</button>
+  <button class="filter-btn" data-filter="tech">Tech</button>
+  <button class="filter-btn" data-filter="fashion">Fashion</button>
+  <button class="filter-btn" data-filter="watch">Watch</button>
+  <button class="filter-btn" data-filter="eyewear">Eyewear</button>
+  <button class="filter-btn" data-filter="sportwear">Sportswear</button>
 </div>
 
-<div class="project-card">
-<img src="/assets/projects/Finance-Dashboard.webp" alt="Finance-Dashboard: A comprehensive financial 
-analytics dashboard designed to track, analyze, and visualize key business performance metrics in real 
-time. The system transforms raw financial data into actionable insights, enabling better decision-making 
-for business growth and efficiency.
-The dashboard provides a clear overview of core KPIs including revenue, expenses, profit margins, cash 
-flow, and growth trends. It is structured to help users quickly understand financial health through 
-interactive charts, summaries, and breakdowns by category and time period.
-Built with a focus on clarity, performance, and usability, the dashboard supports data-driven 
-decision-making by highlighting trends, anomalies, and financial performance indicators in a simple and 
-intuitive interface.">
-<div class="project-card-info">
-<h3>Finance KPIs Dashboard</h3>
-<p>A comprehensive financial analytics dashboard designed to track, analyze, and visualize key business 
-performance metrics in real time. The system transforms raw financial data into actionable insights, 
-enabling better decision-making for business growth and efficiency.The dashboard provides a clear 
-overview of core KPIs including revenue, expenses, profit margins, cash flow, and growth trends. It is 
-structured to help users quickly understand financial health through interactive charts, summaries, and 
-breakdowns by category and time period.</p>
-<div class="project-tags">
-<span>Finance Dashboard</span>
-<span>Financial Analytics</span>
-<span>Power BI</span>
-<span>Data Visualization</span>
-<span>Cash Flow Analysis</span>
-<span>Performance Tracking</span>
-<span>Excel</span>
-</div>
-<div class="project-links">
-<a href="https://github.com/alibhatti23/Finance_KPIs_Dashboard" target=" blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
+<div class="project-grid" id="projectGrid">
+
+  <div class="project-card" data-category="skin-care">
+    <div class="project-preview">
+      <a href="https://meowmeowtweet.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://meowmeowtweet.com/" alt="Meow Meow Tweet" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Meow Meow Tweet</h3>
+      <span class="project-category">Skin Care</span>
+      <a class="project-visit" href="https://meowmeowtweet.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="hair-care">
+    <div class="project-preview">
+      <a href="https://www.briogeohair.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.briogeohair.com/" alt="Briogeo" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Briogeo</h3>
+      <span class="project-category">Hair Care</span>
+      <a class="project-visit" href="https://www.briogeohair.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="supplement">
+    <div class="project-preview">
+      <a href="https://magicmind.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://magicmind.com/" alt="Magic Mind" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Magic Mind</h3>
+      <span class="project-category">Supplement</span>
+      <a class="project-visit" href="https://magicmind.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="coffee">
+    <div class="project-preview">
+      <a href="https://chamberlaincoffee.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://chamberlaincoffee.com/" alt="Chamberlain Coffee" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Chamberlain Coffee</h3>
+      <span class="project-category">Coffee</span>
+      <a class="project-visit" href="https://chamberlaincoffee.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="fragrance">
+    <div class="project-preview">
+      <a href="https://snif.co/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://snif.co/" alt="Snif" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Snif</h3>
+      <span class="project-category">Fragrance</span>
+      <a class="project-visit" href="https://snif.co/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="jewelry">
+    <div class="project-preview">
+      <a href="https://www.kateandkole.com.au/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.kateandkole.com.au/" alt="Kate & Kole" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Kate & Kole</h3>
+      <span class="project-category">Jewelry</span>
+      <a class="project-visit" href="https://www.kateandkole.com.au/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="pet">
+    <div class="project-preview">
+      <a href="https://wildone.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://wildone.com/" alt="Wild One" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Wild One</h3>
+      <span class="project-category">Pet</span>
+      <a class="project-visit" href="https://wildone.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="cloth">
+    <div class="project-preview">
+      <a href="https://www.maje.ae/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.maje.ae/" alt="Maje" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Maje</h3>
+      <span class="project-category">Cloth</span>
+      <a class="project-visit" href="https://www.maje.ae/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="home-decor">
+    <div class="project-preview">
+      <a href="https://sundaycitizen.co/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://sundaycitizen.co/" alt="Sunday Citizen" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Sunday Citizen</h3>
+      <span class="project-category">Home Decor</span>
+      <a class="project-visit" href="https://sundaycitizen.co/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="kitchen">
+    <div class="project-preview">
+      <a href="https://fromourplace.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://fromourplace.com/" alt="Our Place" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Our Place</h3>
+      <span class="project-category">Kitchen</span>
+      <a class="project-visit" href="https://fromourplace.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="apparel">
+    <div class="project-preview">
+      <a href="https://negativeunderwear.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://negativeunderwear.com/" alt="Negative Underwear" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Negative Underwear</h3>
+      <span class="project-category">Apparel</span>
+      <a class="project-visit" href="https://negativeunderwear.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="baby">
+    <div class="project-preview">
+      <a href="https://www.meetlalo.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.meetlalo.com/" alt="Lalo" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Lalo</h3>
+      <span class="project-category">Baby</span>
+      <a class="project-visit" href="https://www.meetlalo.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="outdoor">
+    <div class="project-preview">
+      <a href="https://www.parksproject.us/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.parksproject.us/" alt="Parks Project" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Parks Project</h3>
+      <span class="project-category">Outdoor</span>
+      <a class="project-visit" href="https://www.parksproject.us/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="bags">
+    <div class="project-preview">
+      <a href="https://bellroy.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://bellroy.com/" alt="Bellroy" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Bellroy</h3>
+      <span class="project-category">Bags</span>
+      <a class="project-visit" href="https://bellroy.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="tech">
+    <div class="project-preview">
+      <a href="https://www.nativeunion.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.nativeunion.com/" alt="Native Union" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Native Union</h3>
+      <span class="project-category">Tech</span>
+      <a class="project-visit" href="https://www.nativeunion.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="fashion">
+    <div class="project-preview">
+      <a href="https://kotn.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://kotn.com/" alt="Kotn" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Kotn</h3>
+      <span class="project-category">Fashion</span>
+      <a class="project-visit" href="https://kotn.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="footwear">
+    <div class="project-preview">
+      <a href="https://www.allbirds.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.allbirds.com/" alt="Allbirds" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Allbirds</h3>
+      <span class="project-category">Footwear</span>
+      <a class="project-visit" href="https://www.allbirds.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="watch">
+    <div class="project-preview">
+      <a href="https://gharyal.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://gharyal.com/" alt="Gharyal" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Gharyal</h3>
+      <span class="project-category">Watch</span>
+      <a class="project-visit" href="https://gharyal.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="cloth">
+    <div class="project-preview">
+      <a href="https://nureh.pk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://nureh.pk/" alt="Nureh" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Nureh</h3>
+      <span class="project-category">Cloth</span>
+      <a class="project-visit" href="https://nureh.pk/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="streetwear">
+    <div class="project-preview">
+      <a href="https://www.shopmanto.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.shopmanto.com/" alt="Manto" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Manto</h3>
+      <span class="project-category">Streetwear</span>
+      <a class="project-visit" href="https://www.shopmanto.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="skin-care">
+    <div class="project-preview">
+      <a href="https://conaturalintl.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://conaturalintl.com/" alt="Conatural" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Conatural</h3>
+      <span class="project-category">Skin Care</span>
+      <a class="project-visit" href="https://conaturalintl.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="eyewear">
+    <div class="project-preview">
+      <a href="https://opticworld.pk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://opticworld.pk/" alt="Optic World" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Optic World</h3>
+      <span class="project-category">Eyewear</span>
+      <a class="project-visit" href="https://opticworld.pk/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="sportwear">
+    <div class="project-preview">
+      <a href="https://theirongear.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://theirongear.com/" alt="Iron Gear" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Iron Gear</h3>
+      <span class="project-category">Sportswear</span>
+      <a class="project-visit" href="https://theirongear.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="coffee">
+    <div class="project-preview">
+      <a href="https://raazlife.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://raazlife.com/" alt="Raaz" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Raaz</h3>
+      <span class="project-category">Coffee</span>
+      <a class="project-visit" href="https://raazlife.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="footwear">
+    <div class="project-preview">
+      <a href="https://ca.vessi.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://ca.vessi.com/" alt="Vessi" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Vessi</h3>
+      <span class="project-category">Footwear</span>
+      <a class="project-visit" href="https://ca.vessi.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="cloth">
+    <div class="project-preview">
+      <a href="https://www.rhodeskin.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.rhodeskin.com/" alt="Rhode Skin" loading="lazy">
+      </a>
+      <div class="project-preview-overlay"></div>
+      <span class="scroll-hint">↕ Hover to scroll</span>
+    </div>
+    <div class="project-info">
+      <h3>Rhode Skin</h3>
+      <span class="project-category">Cloth</span>
+      <a class="project-visit" href="https://www.rhodeskin.com/" target="_blank" rel="noopener noreferrer">
+        Visit Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
 </div>
 
-<div class="project-card">
-<img src="/assets/projects/Budgeting & Forcasting Model.webp" alt="Budget and Forecasting Model is a 
-financial planning system designed to help businesses plan, track, and predict future income and 
-expenses. It enables scenario analysis, budgeting, and financial forecasting to support strategic 
-decision-making and long-term growth.">
-<div class="project-card-info">
-<h3>Budget & Forecasting Model</h3>
-<p>Budget and Forecasting Model is a financial planning system designed to help businesses plan, track, 
-and predict future income and expenses. It enables scenario analysis, budgeting, and financial 
-forecasting to support strategic decision-making and long-term growth.</p>
-<div class="project-tags">
-<span>Budgeting Model</span>
-<span>Financial Forecasting</span>
-<span>Budget Planning</span>
-<span>Revenue Forecast</span>
-<span>Expense Tracking</span>
-<span>Scenario Analysis</span>
-<span>Financial Planning</span>
-</div>
-<div class="project-links">
-<a href="https://github.com/alibhatti23/Budget-Forcasting-Model" target="_blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
-</div>
+<script>
+(function() {
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  const grid = document.getElementById('projectGrid');
 
-<div class="project-card">
-<img src="/assets/projects/Sale.webp" alt="Sales Performance Analytics Dashboard: Sales Performance 
-Analytics Dashboard visualizes key business metrics like revenue, profit, and expenses. It tracks sales 
-trends, highlights top products, and provides actionable insights to support data-driven decision-making 
-and improve overall business performance">
-<div class="project-card-info">
-<h3>sales Performance Analytics Dashboard</h3>
-<p>Sales Performance Analytics Dashboard visualizes key business metrics like revenue, profit, and expenses. It tracks sales trends, highlights top products, and provides actionable insights to support data-driven decision-making and improve overall business performance.</p>
-<div class="project-tags">
-<span>Sales Dashboard</span>
-<span>Business Inteligence</span>
-<span>Data Analysis</span>
-<span>KPI Dashboard</span>
-<span>Profit analysis</span>
-<span>Performance Tracking</span>
-<span>Excel Model</span>
-</div>
-<div class="project-links">
-<a href="https://github.com/alibhatti23/Sales-Performance-Analytics-Dashboard" target="_blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
-</div>
-
-<div class="project-card">
-<img src="/assets/projects/Bookkeeping.webp" alt="A simple yet structured bookkeeping system designed for small businesses to record and manage daily financial transactions in an organized way. The system helps track income, expenses, and basic financial activities to maintain clear and accurate financial records.">
-<div class="project-card-info">
-<h3>Small Business Bookkeeping System</h3>
-<p>A simple yet structured bookkeeping system designed for small businesses to record and manage daily financial transactions in an organized way. The system helps track income, expenses, and basic financial activities to maintain clear and accurate financial records.It enables business owners to monitor cash flow, understand profit and loss, and keep all financial entries systematically categorized for better financial control and decision-making. The model is built to reduce manual confusion and improve financial clarity for small-scale operations.</p>
-<div class="project-tags">
-<span>Bookkeeping</span>
-<span>Small Business Finance</span>
-<span>Accounting System</span>
-<span>Expense tracking</span>
-<span>Cash Flow Management</span>
-<span>Finanial Records</span>
-<span>Profit & Loss</span>
-</div>
-<div class="project-links">
-<a href="https://github.com/alibhatti23/Business-Bookkeeping-System" target="_blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
-</div>
-
-</div>
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? 'flex' : 'none';
+        if (match) visible++;
+      });
+      let noResult = grid.querySelector('.no-results');
+      if (visible === 0) {
+        if (!noResult) {
+          noResult = document.createElement('p');
+          noResult.className = 'no-results';
+          noResult.textContent = 'No projects in this category yet.';
+          grid.appendChild(noResult);
+        }
+      } else if (noResult) {
+        noResult.remove();
+      }
+    });
+  });
+})();
+</script>
