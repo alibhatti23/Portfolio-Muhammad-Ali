@@ -78,7 +78,7 @@ params:
   profileMode:
     enabled: true
     title: "Muhammad Ali Sajid" # optional default will be site title
-    subtitle: "Shopify Developer · Co-founder of Creatify · BS Accounting & Finance"
+    subtitle: "Shopify Developer · Co-founder of Creatify · AFA"
     imageUrl: "/assets/profile-1.webp" # Ensure this file exists
     imageTitle: "Muhammad Ali Sajid - Affiliate Financial Accountant from Pakistan"
     imageWidth: 120 # custom size
