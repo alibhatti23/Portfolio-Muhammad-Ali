@@ -212,9 +212,15 @@
 }
 .message-bubble p { margin: 0 0 0.45rem; }
 .message-bubble p:last-child { margin-bottom: 0; }
-.message-bubble a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.message.user .message-bubble a { color: rgba(255,255,255,0.9); }
+.message-bubble a { text-decoration: underline; text-underline-offset: 2px; }
+.message.assistant .message-bubble p,
+.message.assistant .message-bubble li,
+.message.assistant .message-bubble h3,
+.message.assistant .message-bubble h4 { color: var(--primary); }
 .message.assistant .message-bubble a { color: var(--accent); }
+.message.user .message-bubble p,
+.message.user .message-bubble li { color: #fff; }
+.message.user .message-bubble a { color: rgba(255,255,255,0.9); }
 .message-bubble strong { font-weight: 700; }
 .message-bubble ul, .message-bubble ol { margin: 0.35rem 0; padding-left: 1.4rem; }
 .message-bubble li { margin-bottom: 0.3rem; line-height: 1.55; }
