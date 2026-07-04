@@ -77,7 +77,7 @@ export default async function handler(req, res) {
     { role: 'user', parts: [{ text: message.trim() }] },
   ];
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:streamGenerateContent?alt=sse&key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=${apiKey}`;
 
   try {
     const upstream = await fetch(url, {
