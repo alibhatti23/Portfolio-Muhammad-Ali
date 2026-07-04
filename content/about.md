@@ -42,7 +42,7 @@ lastmod: 2026-07-04
 .work-card{padding:1.1rem 1.3rem;background:var(--entry);border:1px solid var(--border);border-radius:10px;margin-bottom:.85rem}
 .work-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
 .work-card-header h3{margin:0;font-size:1rem;font-weight:700}
-.work-period{font-size:.78rem;color:var(--secondary);background:var(--code-bg,rgba(0,0,0,0.05));padding:.15rem .5rem;border-radius:4px;white-space:nowrap;font-weight:500}
+.work-period{font-size:.78rem;color:var(--primary);background:var(--code-bg,rgba(0,0,0,0.05));padding:.15rem .5rem;border-radius:4px;white-space:nowrap;font-weight:500}
 .work-role{font-size:.88rem;color:var(--accent);font-weight:600;margin:0 0 .5rem}
 .work-card p{margin:0;font-size:.88rem;color:var(--primary);line-height:1.65}
 .work-bullets{margin:.5rem 0 0;padding-left:1.1rem;font-size:.86rem;color:var(--primary);line-height:1.8}
