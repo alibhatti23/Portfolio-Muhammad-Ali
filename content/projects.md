@@ -627,7 +627,7 @@ hideMeta: true
   <div class="project-card" data-category="cloth">
     <div class="project-preview">
       <a href="https://www.rhodeskin.com/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/projects/rhode-skin.webp" alt="Rhode Skin" loading="lazy">
+        <img src="/assets/projects/rhode.webp" alt="Rhode Skin" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
