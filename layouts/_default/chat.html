@@ -245,34 +245,6 @@
   30% { opacity:1; transform:translateY(-4px); }
 }
 
-/* ── Suggested questions ─────────────────────────────────── */
-.suggested-questions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.6rem 1rem;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-.suggested-row { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
-.suggested-btn {
-  padding: 0.45rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--entry);
-  color: var(--primary);
-  font-size: 0.79rem;
-  cursor: pointer;
-  transition: all 0.18s;
-  font-family: inherit;
-  font-weight: 500;
-}
-.suggested-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-
 /* ── Input area ──────────────────────────────────────────── */
 .chat-input-area {
   padding: 0.6rem 1rem 1.5rem;
@@ -421,19 +393,6 @@
   <!-- Messages -->
   <div class="chat-messages" id="chatMessages"></div>
 
-  <!-- Suggested questions -->
-  <div class="suggested-questions" id="suggestedQuestions">
-    <div class="suggested-row">
-      <button class="suggested-btn" onclick="askSuggested(this)">What Shopify stores have you built?</button>
-      <button class="suggested-btn" onclick="askSuggested(this)">How do I hire you for a project?</button>
-    </div>
-    <div class="suggested-row">
-      <button class="suggested-btn" onclick="askSuggested(this)">Tell me about Creatify</button>
-      <button class="suggested-btn" onclick="askSuggested(this)">What's your accounting background?</button>
-      <button class="suggested-btn" onclick="askSuggested(this)">Show me your finance projects</button>
-    </div>
-  </div>
-
   <!-- Input -->
   <div class="chat-input-area">
     <div class="chat-input-wrapper">
@@ -456,7 +415,6 @@
   const chatMessages   = document.getElementById('chatMessages');
   const chatInput      = document.getElementById('chatInput');
   const sendBtn        = document.getElementById('sendBtn');
-  const suggestedEl    = document.getElementById('suggestedQuestions');
   const emptyState     = document.getElementById('chatEmptyState');
   const newChatBtn     = document.getElementById('newChatBtn');
   const charCounter    = document.getElementById('charCounter');
@@ -493,7 +451,6 @@
     lastFailedMessage = null;
     chatMessages.innerHTML = '';
     emptyState.style.display = '';
-    suggestedEl.style.display = '';
     chatInput.value = '';
     chatInput.style.height = 'auto';
     charCounter.className = 'chat-char-counter';
@@ -629,8 +586,7 @@
     if (!message || isGenerating) return;
 
     lastFailedMessage = message;
-    if (suggestedEl) suggestedEl.style.display = 'none';
-    if (emptyState)  emptyState.style.display  = 'none';
+    if (emptyState) emptyState.style.display = 'none';
 
     addMessage('user', message);
 
