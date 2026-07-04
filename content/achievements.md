@@ -13,7 +13,7 @@ hideMeta: true
 
 <style>
 .ach-intro {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 0.97rem;
   margin-bottom: 2.5rem;
   line-height: 1.7;
@@ -80,7 +80,7 @@ hideMeta: true
 .ach-body p {
   margin: 0 0 0.6rem;
   font-size: 0.88rem;
-  color: var(--secondary);
+  color: var(--primary);
   line-height: 1.65;
 }
 .ach-meta {
@@ -91,7 +91,7 @@ hideMeta: true
 }
 .ach-date {
   font-size: 0.76rem;
-  color: var(--secondary);
+  color: var(--primary);
   background: var(--code-bg, rgba(0,0,0,0.05));
   padding: 0.15rem 0.55rem;
   border-radius: 4px;
@@ -125,7 +125,7 @@ hideMeta: true
 }
 .ach-stat .label {
   font-size: 0.78rem;
-  color: var(--secondary);
+  color: var(--primary);
   margin-top: 0.3rem;
   display: block;
 }
