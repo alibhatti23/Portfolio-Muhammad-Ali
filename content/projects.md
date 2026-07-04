@@ -15,7 +15,7 @@ hideMeta: true
   margin-bottom: 2rem;
 }
 .projects-header p {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 1rem;
   margin: 0.5rem 0 0;
 }
@@ -132,7 +132,7 @@ hideMeta: true
   padding: 0.15rem 0.55rem;
   border-radius: 4px;
   background: var(--code-bg, rgba(0,0,0,0.06));
-  color: var(--secondary);
+  color: var(--primary);
   margin-bottom: 0.75rem;
   text-transform: capitalize;
 }
