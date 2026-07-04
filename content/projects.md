@@ -1,6 +1,6 @@
----
+﻿---
 title: "Projects"
-description: "Shopify stores built and customized by Muhammad Ali Sajid — spanning fashion, beauty, skincare, footwear, tech, and more across international and Pakistani markets."
+description: "Shopify stores built and customized by Muhammad Ali Sajid â€” spanning fashion, beauty, skincare, footwear, tech, and more across international and Pakistani markets."
 keywords: [Projects, Shopify, Portfolio, Liquid, E-commerce, Custom Theme, Pakistan, International]
 lastmod: 2026-07-04
 showtoc: false
@@ -169,7 +169,7 @@ hideMeta: true
 </style>
 
 <div class="projects-header">
-  <p>26 Shopify stores built & customized — fashion, beauty, skincare, tech, and more.</p>
+  <p>26 Shopify stores built & customized â€” fashion, beauty, skincare, tech, and more.</p>
 </div>
 
 <div class="filter-bar">
@@ -202,7 +202,7 @@ hideMeta: true
   <div class="project-card" data-category="skin-care">
     <div class="project-preview">
       <a href="https://meowmeowtweet.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://meowmeowtweet.com/" alt="Meow Meow Tweet" loading="lazy">
+        <img src="/assets/projects/meow-meow-tweet.webp" alt="Meow Meow Tweet" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -219,7 +219,7 @@ hideMeta: true
   <div class="project-card" data-category="hair-care">
     <div class="project-preview">
       <a href="https://www.briogeohair.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.briogeohair.com/" alt="Briogeo" loading="lazy">
+        <img src="/assets/projects/briogeo.webp" alt="Briogeo" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -236,7 +236,7 @@ hideMeta: true
   <div class="project-card" data-category="supplement">
     <div class="project-preview">
       <a href="https://magicmind.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://magicmind.com/" alt="Magic Mind" loading="lazy">
+        <img src="/assets/projects/magic-mind.webp" alt="Magic Mind" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -253,7 +253,7 @@ hideMeta: true
   <div class="project-card" data-category="coffee">
     <div class="project-preview">
       <a href="https://chamberlaincoffee.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://chamberlaincoffee.com/" alt="Chamberlain Coffee" loading="lazy">
+        <img src="/assets/projects/chamberlain-coffee.webp" alt="Chamberlain Coffee" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -270,7 +270,7 @@ hideMeta: true
   <div class="project-card" data-category="fragrance">
     <div class="project-preview">
       <a href="https://snif.co/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://snif.co/" alt="Snif" loading="lazy">
+        <img src="/assets/projects/snif.webp" alt="Snif" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -287,7 +287,7 @@ hideMeta: true
   <div class="project-card" data-category="jewelry">
     <div class="project-preview">
       <a href="https://www.kateandkole.com.au/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.kateandkole.com.au/" alt="Kate & Kole" loading="lazy">
+        <img src="/assets/projects/kate-and-kole.webp" alt="Kate & Kole" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -304,7 +304,7 @@ hideMeta: true
   <div class="project-card" data-category="pet">
     <div class="project-preview">
       <a href="https://wildone.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://wildone.com/" alt="Wild One" loading="lazy">
+        <img src="/assets/projects/wild-one.webp" alt="Wild One" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -321,7 +321,7 @@ hideMeta: true
   <div class="project-card" data-category="cloth">
     <div class="project-preview">
       <a href="https://www.maje.ae/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.maje.ae/" alt="Maje" loading="lazy">
+        <img src="/assets/projects/maje.webp" alt="Maje" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -338,7 +338,7 @@ hideMeta: true
   <div class="project-card" data-category="home-decor">
     <div class="project-preview">
       <a href="https://sundaycitizen.co/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://sundaycitizen.co/" alt="Sunday Citizen" loading="lazy">
+        <img src="/assets/projects/sunday-citizen.webp" alt="Sunday Citizen" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -355,7 +355,7 @@ hideMeta: true
   <div class="project-card" data-category="kitchen">
     <div class="project-preview">
       <a href="https://fromourplace.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://fromourplace.com/" alt="Our Place" loading="lazy">
+        <img src="/assets/projects/our-place.webp" alt="Our Place" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -372,7 +372,7 @@ hideMeta: true
   <div class="project-card" data-category="apparel">
     <div class="project-preview">
       <a href="https://negativeunderwear.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://negativeunderwear.com/" alt="Negative Underwear" loading="lazy">
+        <img src="/assets/projects/negative-underwear.webp" alt="Negative Underwear" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -389,7 +389,7 @@ hideMeta: true
   <div class="project-card" data-category="baby">
     <div class="project-preview">
       <a href="https://www.meetlalo.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.meetlalo.com/" alt="Lalo" loading="lazy">
+        <img src="/assets/projects/lalo.webp" alt="Lalo" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -406,7 +406,7 @@ hideMeta: true
   <div class="project-card" data-category="outdoor">
     <div class="project-preview">
       <a href="https://www.parksproject.us/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.parksproject.us/" alt="Parks Project" loading="lazy">
+        <img src="/assets/projects/parks-project.webp" alt="Parks Project" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -423,7 +423,7 @@ hideMeta: true
   <div class="project-card" data-category="bags">
     <div class="project-preview">
       <a href="https://bellroy.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://bellroy.com/" alt="Bellroy" loading="lazy">
+        <img src="/assets/projects/bellroy.webp" alt="Bellroy" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -440,7 +440,7 @@ hideMeta: true
   <div class="project-card" data-category="tech">
     <div class="project-preview">
       <a href="https://www.nativeunion.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.nativeunion.com/" alt="Native Union" loading="lazy">
+        <img src="/assets/projects/native-union.webp" alt="Native Union" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -457,7 +457,7 @@ hideMeta: true
   <div class="project-card" data-category="fashion">
     <div class="project-preview">
       <a href="https://kotn.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://kotn.com/" alt="Kotn" loading="lazy">
+        <img src="/assets/projects/kotn.webp" alt="Kotn" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -474,7 +474,7 @@ hideMeta: true
   <div class="project-card" data-category="footwear">
     <div class="project-preview">
       <a href="https://www.allbirds.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.allbirds.com/" alt="Allbirds" loading="lazy">
+        <img src="/assets/projects/allbirds.webp" alt="Allbirds" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -491,7 +491,7 @@ hideMeta: true
   <div class="project-card" data-category="watch">
     <div class="project-preview">
       <a href="https://gharyal.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://gharyal.com/" alt="Gharyal" loading="lazy">
+        <img src="/assets/projects/gharyal.webp" alt="Gharyal" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -508,7 +508,7 @@ hideMeta: true
   <div class="project-card" data-category="cloth">
     <div class="project-preview">
       <a href="https://nureh.pk/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://nureh.pk/" alt="Nureh" loading="lazy">
+        <img src="/assets/projects/nureh.webp" alt="Nureh" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -525,7 +525,7 @@ hideMeta: true
   <div class="project-card" data-category="streetwear">
     <div class="project-preview">
       <a href="https://www.shopmanto.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.shopmanto.com/" alt="Manto" loading="lazy">
+        <img src="/assets/projects/manto.webp" alt="Manto" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -542,7 +542,7 @@ hideMeta: true
   <div class="project-card" data-category="skin-care">
     <div class="project-preview">
       <a href="https://conaturalintl.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://conaturalintl.com/" alt="Conatural" loading="lazy">
+        <img src="/assets/projects/conatural.webp" alt="Conatural" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -559,7 +559,7 @@ hideMeta: true
   <div class="project-card" data-category="eyewear">
     <div class="project-preview">
       <a href="https://opticworld.pk/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://opticworld.pk/" alt="Optic World" loading="lazy">
+        <img src="/assets/projects/optic-world.webp" alt="Optic World" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -576,7 +576,7 @@ hideMeta: true
   <div class="project-card" data-category="sportwear">
     <div class="project-preview">
       <a href="https://theirongear.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://theirongear.com/" alt="Iron Gear" loading="lazy">
+        <img src="/assets/projects/iron-gear.webp" alt="Iron Gear" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -593,7 +593,7 @@ hideMeta: true
   <div class="project-card" data-category="coffee">
     <div class="project-preview">
       <a href="https://raazlife.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://raazlife.com/" alt="Raaz" loading="lazy">
+        <img src="/assets/projects/raaz.webp" alt="Raaz" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -610,7 +610,7 @@ hideMeta: true
   <div class="project-card" data-category="footwear">
     <div class="project-preview">
       <a href="https://ca.vessi.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://ca.vessi.com/" alt="Vessi" loading="lazy">
+        <img src="/assets/projects/vessi.webp" alt="Vessi" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -627,7 +627,7 @@ hideMeta: true
   <div class="project-card" data-category="cloth">
     <div class="project-preview">
       <a href="https://www.rhodeskin.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://image.thum.io/get/fullpage/width/800/noanimate/https://www.rhodeskin.com/" alt="Rhode Skin" loading="lazy">
+        <img src="/assets/projects/rhode-skin.webp" alt="Rhode Skin" loading="lazy">
       </a>
       <div class="project-preview-overlay"></div>
       <span class="scroll-hint">↕ Hover to scroll</span>
@@ -675,3 +675,4 @@ hideMeta: true
   });
 })();
 </script>
+
