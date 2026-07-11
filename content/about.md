@@ -103,10 +103,10 @@ lastmod: 2026-07-04
 </div>
 
 <div class="about-stats">
-  <div class="about-stat"><span class="n">26+</span><span class="l">Shopify Stores</span></div>
+  <div class="about-stat"><span class="n">500+</span><span class="l">Shopify Stores</span></div>
   <div class="about-stat"><span class="n">3</span><span class="l">International Brands</span></div>
   <div class="about-stat"><span class="n">17</span><span class="l">CMA Papers Done</span></div>
-  <div class="about-stat"><span class="n">15+</span><span class="l">Blog Articles</span></div>
+  <div class="about-stat"><span class="n">22+</span><span class="l">Blog Articles</span></div>
 </div>
 
 <div class="about-h2">Work</div>
