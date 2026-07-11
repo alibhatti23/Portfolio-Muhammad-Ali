@@ -135,7 +135,7 @@ hideMeta: true
 
 <div class="ach-stats">
   <div class="ach-stat">
-    <span class="num">26+</span>
+    <span class="num">500+</span>
     <span class="label">Shopify Stores Built</span>
   </div>
   <div class="ach-stat">
@@ -147,7 +147,7 @@ hideMeta: true
     <span class="label">CMA Papers Done</span>
   </div>
   <div class="ach-stat">
-    <span class="num">15+</span>
+    <span class="num">Blog</span>
     <span class="label">Technical Blog Posts</span>
   </div>
 </div>
@@ -161,7 +161,7 @@ hideMeta: true
       <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     </div>
     <div class="ach-body">
-      <h3>Founded Creatify -- Shopify Freelance Agency</h3>
+      <h3>Founded (Creatify)[www.creatify.site] -- Shopify Freelance Agency</h3>
       <p>Built and launched Creatify from scratch while still a university student -- a Shopify-focused freelance agency delivering custom theme development, landing pages, and end-to-end store builds for clients in Pakistan and internationally. Running as founder and lead developer since day one.</p>
       <div class="ach-meta">
         <span class="ach-date">2025 -- Present</span>
@@ -247,7 +247,7 @@ hideMeta: true
       <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
     </div>
     <div class="ach-body">
-      <h3>Built 4 Finance Tools -- Publicly Available on GitHub</h3>
+      <h3>Built Finance Tools -- Publicly Available on (GitHub)[https://github.com/alibhatti23]</h3>
       <p>Developed a suite of financial tools from scratch and open-sourced them: a Finance KPIs Dashboard (Power BI + Excel), a Budget &amp; Forecasting Model with scenario analysis, a Sales Performance Analytics Dashboard, and a Small Business Bookkeeping System. All designed for real business use, not academic exercises.</p>
       <div class="ach-meta">
         <span class="ach-date">2025 -- Present</span>
