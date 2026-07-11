@@ -147,7 +147,7 @@ hideMeta: true
     <span class="label">CMA Papers Done</span>
   </div>
   <div class="ach-stat">
-    <span class="num">Blog</span>
+    <span class="num">22+</span>
     <span class="label">Technical Blog Posts</span>
   </div>
 </div>
