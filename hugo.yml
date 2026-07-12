@@ -15,6 +15,10 @@ menu:
       name: Projects
       url: /projects/
       weight: 20
+    - identifier: services
+      name: Services
+      url: /services/
+      weight: 25
     - identifier: achievements
       name: Achievements
       url: /achievements/
