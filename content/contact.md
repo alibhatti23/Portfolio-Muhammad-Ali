@@ -54,14 +54,14 @@ ShowBreadCrumbs: false
   gap: 0.6rem;
   padding: 0.75rem 1.5rem;
   background: var(--primary);
-  color: var(--background);
+  color: var(--background) !important;
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: opacity 0.15s;
 }
-.contact-email:hover { opacity: 0.85; color: var(--background); }
+.contact-email:hover, .contact-email:visited, .contact-email:active { opacity: 0.85; color: var(--background) !important; text-decoration: none !important; }
 .contact-email svg { width: 18px; height: 18px; }
 
 .contact-wa {
@@ -70,14 +70,14 @@ ShowBreadCrumbs: false
   gap: 0.6rem;
   padding: 0.75rem 1.5rem;
   background: #25D366;
-  color: #fff;
+  color: #fff !important;
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: opacity 0.15s;
 }
-.contact-wa:hover { opacity: 0.88; color: #fff; }
+.contact-wa:hover, .contact-wa:visited, .contact-wa:active { opacity: 0.88; color: #fff !important; text-decoration: none !important; }
 .contact-wa svg { width: 18px; height: 18px; }
 
 /* Form */

@@ -22,10 +22,10 @@ ShowBreadCrumbs: false
 .srv-hero p { font-size: 1rem; color: var(--primary); line-height: 1.7; max-width: 560px; margin: 0 0 1.5rem; }
 .srv-hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
-.srv-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; background: var(--accent); color: #fff; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
-.srv-btn-primary:hover { opacity: 0.88; color: #fff; }
-.srv-btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; background: transparent; color: var(--primary); border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-.srv-btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.srv-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; background: var(--accent); color: #fff !important; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none !important; transition: opacity 0.2s; }
+.srv-btn-primary:hover, .srv-btn-primary:visited, .srv-btn-primary:active { opacity: 0.88; color: #fff !important; text-decoration: none !important; }
+.srv-btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; background: transparent; color: var(--primary) !important; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none !important; transition: all 0.2s; }
+.srv-btn-secondary:hover, .srv-btn-secondary:visited, .srv-btn-secondary:active { border-color: var(--accent); color: var(--accent) !important; text-decoration: none !important; }
 .srv-btn-primary svg, .srv-btn-secondary svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 .srv-section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 2.5rem 0 1.1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
