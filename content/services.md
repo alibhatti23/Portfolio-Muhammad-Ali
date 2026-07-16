@@ -80,7 +80,7 @@ ShowBreadCrumbs: false
 <div class="srv-card">
 <div class="srv-card-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
 <h3>Shopify Theme Development</h3>
-<p>Custom Liquid sections, Dawn theme restructuring, section schema, and full storefront builds — clean code, merchant-friendly settings.</p>
+<p>Custom Liquid sections, Dawn theme restructuring, section schema, and full storefront builds clean code, merchant-friendly settings.</p>
 <div class="srv-card-tags"><span class="srv-tag">Liquid</span> <span class="srv-tag">Dawn</span> <span class="srv-tag">Section Schema</span></div>
 </div>
 <div class="srv-card">
