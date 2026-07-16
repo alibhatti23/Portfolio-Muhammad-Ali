@@ -153,7 +153,7 @@ ShowBreadCrumbs: false
 </div>
 <div class="srv-why-item">
 <div class="srv-why-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-<div class="srv-why-body"><h4>26+ Stores Delivered</h4><p>From Pakistani startups to UAE luxury brands and US DTC beauty — I know what works across markets.</p></div>
+<div class="srv-why-body"><h4>26+ Stores Delivered</h4><p>From Pakistani startups to UAE luxury brands and US DTC beauty I know what works across markets.</p></div>
 </div>
 <div class="srv-why-item">
 <div class="srv-why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
