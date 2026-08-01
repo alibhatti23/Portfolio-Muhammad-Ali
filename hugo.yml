@@ -106,7 +106,7 @@ params:
     - name: "whatsapp"
       url: "https://wa.me/923123626704"
     - name: "email"
-      url: "mailto:m.alibhatti1465@gmail.com"
+      url: "mailto:contact@alibhatti.online"
   assets:
     favicon: "/assets/fav.ico"
     favicon16x16: "/assets/favicon-16x16.png"

@@ -222,7 +222,7 @@ ShowBreadCrumbs: false
   <p class="contact-subtext">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
 
   <div class="contact-ctas">
-    <a href="mailto:m.alibhatti1465@gmail.com" class="contact-email">
+    <a href="mailto:contact@alibhatti.online" class="contact-email">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
       </svg>
@@ -271,7 +271,7 @@ ShowBreadCrumbs: false
       ✓ &nbsp;Message sent! I'll get back to you within 24 hours.
     </div>
     <div class="cf-error" id="cfError">
-      Something went wrong. Please try emailing me directly at <a href="mailto:m.alibhatti1465@gmail.com">m.alibhatti1465@gmail.com</a>.
+      Something went wrong. Please try emailing me directly at <a href="mailto:contact@alibhatti.online">contact@alibhatti.online</a>.
     </div>
   </div>
 

@@ -4,7 +4,7 @@ export default function handler(req, res) {
     role: 'Shopify Developer & AFA',
     agency: 'Creatify',
     location: 'Multan, Pakistan',
-    email: 'm.alibhatti1465@gmail.com',
+    email: 'contact@alibhatti.online',
     github: 'https://github.com/alibhatti23',
     linkedin: 'https://www.linkedin.com/in/muhammad-ali-sajid/',
   });
