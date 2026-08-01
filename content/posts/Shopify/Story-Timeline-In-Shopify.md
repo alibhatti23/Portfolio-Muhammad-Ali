@@ -992,4 +992,4 @@ This makes the Story Timeline Shopify Section ideal for non-technical users whil
 
 ### Final thoughts
 
-A well-designed Story Timeline Shopify Section turns your store into more than just a product catalog—it becomes a brand experience. With clean Liquid code, responsive design, and customizable settings, this timeline section is a powerful addition to any Shopify store focused on trust, transparency, and growth.
+A well-designed Story Timeline Shopify Section turns your store into more than just a product catalog. It becomes a brand experience. With clean Liquid code, responsive design, and customizable settings, this timeline section is a powerful addition to any Shopify store focused on trust, transparency, and growth.

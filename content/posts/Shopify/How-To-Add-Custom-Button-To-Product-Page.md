@@ -55,7 +55,7 @@ In this step-by-step guide, I’ll show you exactly how to add a fully customiza
 - **External Links:** Direct customers to size guides, video demos, or PDF instructions.
 
 
-This tutorial was inspired by a real client request—their best-selling product went out of stock, and they wanted to capture leads instead of losing sales. The solution? A custom **“Notify Me When Available”** button.
+This tutorial was inspired by a real client request: their best-selling product went out of stock, and they wanted to capture leads instead of losing sales. The solution? A custom **“Notify Me When Available”** button.
 
 ---
 
@@ -96,7 +96,7 @@ Now, only this product will use your custom template.
 In your new template, you’ll want to remove the standard **“Add to Cart”** and **“Buy Now”** buttons to avoid confusion.
 
 1. Back in the code editor, find your new template (e.g., product.custom-button.liquid).
-2. Locate the button section—this varies by theme, but often appears near {% form 'product', product %}.
+2. Locate the button section (this varies by theme, but often appears near {% form 'product', product %}).
 3. Look for the quantity selector and button code blocks. You can **temporarily hide them** by wrapping them in Liquid comment tags:
 
 ```
@@ -111,7 +111,7 @@ Or simply delete the button sections if you’re sure you won’t need them.
 
 ### 4. Add Custom Button Code
 
-Now for the exciting part—adding your custom button.
+Now for the exciting part: adding your custom button.
 
 - In your template, decide where you want the button to appear (usually where the original buttons were).
 - Add a **Custom Liquid block** (if using sections) or directly insert this code:
@@ -212,4 +212,4 @@ While custom buttons solve specific problems, consider these additional upgrades
 
 ## Conclusion
 
-Adding a custom button to your Shopify product page is a powerful way to enhance customer experience and capture opportunities that standard ecommerce buttons miss. Whether you’re redirecting out-of-stock traffic, linking to special forms, or creating unique pathways through your store—this method gives you complete control without complex coding.
+Adding a custom button to your Shopify product page is a powerful way to enhance customer experience and capture opportunities that standard ecommerce buttons miss. Whether you’re redirecting out-of-stock traffic, linking to special forms, or creating unique pathways through your store, this method gives you complete control without complex coding.

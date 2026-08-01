@@ -47,7 +47,7 @@ The Agentic Storefront is arguably the most revolutionary feature in Shopify Spr
 - Microsoft Copilot
 - Other AI chat platforms
 
-Customers can now browse your products, ask questions, add items to cart, and complete checkout—all without leaving the chat interface. This seamless shopping experience eliminates friction and increases conversion rates.
+Customers can now browse your products, ask questions, add items to cart, and complete checkout, all without leaving the chat interface. This seamless shopping experience eliminates friction and increases conversion rates.
 
 **Benefits:**
 

@@ -50,7 +50,7 @@ Meet your new secret weapon: [The EmbedAny app](https://apps.shopify.com/embed).
 
 Here’s the entire process:
 
-1. **Copy a link** (from Instagram, TikTok, YouTube, Google Reviews—over 800 sites work!).
+1. **Copy a link** (from Instagram, TikTok, YouTube, Google Reviews, over 800 sites work!).
 2. **Paste it** into any Shopify text box (product description, blog post, homepage section).
 3. **Make it italic.** Yes, really. Just highlight the link and click the italic button.
 4. **Save.** Watch the link transform into a perfect, responsive embed.
@@ -78,6 +78,6 @@ The best part? It keeps your site fast because the content loads intelligently f
 
 #### The Bottom Line
 
-For less than a fancy coffee per month, you can stop feeling limited by **“what Shopify allows.”** The [EmbedAny](https://apps.shopify.com/embed) app hands you the keys to a more dynamic, engaging store—all without a single line of code.
+For less than a fancy coffee per month, you can stop feeling limited by **“what Shopify allows.”** The [EmbedAny](https://apps.shopify.com/embed) app hands you the keys to a more dynamic, engaging store, all without a single line of code.
 
 Ready to try the magic? Search [“EmbedAny”](https://apps.shopify.com/embed) in the Shopify App Store. Their free trial lets you test it risk-free. Paste your first link, hit italic, and prepare to be amazed.

@@ -658,7 +658,7 @@
 
     } catch (err) {
       hideTyping();
-      showError(err.name === 'TypeError' ? 'Network error — check your connection.' : 'Something went wrong. Please try again.');
+      showError(err.name === 'TypeError' ? 'Network error. Check your connection.' : 'Something went wrong. Please try again.');
       console.error('Chat error:', err);
     } finally {
       isGenerating = false;

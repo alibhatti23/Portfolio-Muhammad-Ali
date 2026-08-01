@@ -130,7 +130,7 @@ ShowShareButtons: false
 </style>
 
 <h1 class="tools-page-title">Tools &amp; Setup</h1>
-<p class="tools-page-sub">Every tool I rely on daily — for Shopify development, financial modeling, and running Creatify. Chosen for one reason: they don't slow me down.</p>
+<p class="tools-page-sub">Every tool I rely on daily for Shopify development, financial modeling, and running Creatify. Chosen for one reason: they don't slow me down.</p>
 
 <img class="setup-img" src="/assets/desktop.webp" alt="Muhammad Ali Sajid's workspace setup" loading="lazy">
 
@@ -144,7 +144,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Visual Studio Code</h4>
-      <p>My primary editor for everything — Shopify Liquid, JavaScript, CSS, and HTML. Extensions I run: Shopify Liquid (syntax highlighting + linting), Prettier (auto-formatting), GitLens (inline git blame and history), and Liquid Snippets. Fast, lightweight, and endlessly customizable.</p>
+      <p>My primary editor for everything: Shopify Liquid, JavaScript, CSS, and HTML. Extensions I run: Shopify Liquid (syntax highlighting + linting), Prettier (auto-formatting), GitLens (inline git blame and history), and Liquid Snippets. Fast, lightweight, and endlessly customizable.</p>
       <div class="tool-tags"><span class="tool-tag">Editor</span><span class="tool-tag">Liquid</span><span class="tool-tag">JS</span></div>
     </div>
   </div>
@@ -166,7 +166,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Shopify Partner Dashboard</h4>
-      <p>The official hub for managing client stores, development stores, and theme submissions. Essential for any Shopify developer running multiple client accounts. I use it daily — creating dev environments, previewing themes before go-live, and managing Creatify client access.</p>
+      <p>The official hub for managing client stores, development stores, and theme submissions. Essential for any Shopify developer running multiple client accounts. I use it daily: creating dev environments, previewing themes before go-live, and managing Creatify client access.</p>
       <div class="tool-tags"><span class="tool-tag">Client Management</span><span class="tool-tag">Dev Stores</span><span class="tool-tag">Theme Preview</span></div>
     </div>
   </div>
@@ -199,7 +199,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Chrome DevTools</h4>
-      <p>The browser's built-in developer console — indispensable for inspecting Shopify themes live. I use it to debug CSS overrides, check responsive breakpoints, profile page load performance, and test JavaScript in real-time on client stores without committing changes.</p>
+      <p>The browser's built-in developer console, indispensable for inspecting Shopify themes live. I use it to debug CSS overrides, check responsive breakpoints, profile page load performance, and test JavaScript in real-time on client stores without committing changes.</p>
       <div class="tool-tags"><span class="tool-tag">Debugging</span><span class="tool-tag">CSS Inspection</span><span class="tool-tag">Performance</span></div>
     </div>
   </div>
@@ -210,7 +210,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Google Search Console + Analytics</h4>
-      <p>Core tools for Shopify store SEO and performance tracking. Search Console reveals which keywords pages rank for, detects indexing issues, and flags Core Web Vitals problems. Analytics tracks user behavior, conversion funnels, and traffic sources to optimize store revenue — not just traffic.</p>
+      <p>Core tools for Shopify store SEO and performance tracking. Search Console reveals which keywords pages rank for, detects indexing issues, and flags Core Web Vitals problems. Analytics tracks user behavior, conversion funnels, and traffic sources to optimize store revenue, not just traffic.</p>
       <div class="tool-tags"><span class="tool-tag">SEO</span><span class="tool-tag">Analytics</span><span class="tool-tag">CRO</span></div>
     </div>
   </div>
@@ -219,10 +219,10 @@ ShowShareButtons: false
 
 <p style="font-size:0.88rem; color:var(--primary); margin: 0.5rem 0 0.25rem; font-weight:600;">Browser Extensions</p>
 <div class="ext-list">
-  <span class="ext-item"><span class="ext-dot" style="background:#E0442B;"></span>uBlock Origin — ad &amp; tracker blocker</span>
-  <span class="ext-item"><span class="ext-dot" style="background:#96BF48;"></span>Koala Inspector — Shopify store analyzer</span>
-  <span class="ext-item"><span class="ext-dot" style="background:#FF6B6B;"></span>ColorZilla — color picker from any webpage</span>
-  <span class="ext-item"><span class="ext-dot" style="background:#4285F4;"></span>WhatFont — identify fonts on any site</span>
+  <span class="ext-item"><span class="ext-dot" style="background:#E0442B;"></span>uBlock Origin (ad &amp; tracker blocker)</span>
+  <span class="ext-item"><span class="ext-dot" style="background:#96BF48;"></span>Koala Inspector (Shopify store analyzer)</span>
+  <span class="ext-item"><span class="ext-dot" style="background:#FF6B6B;"></span>ColorZilla (color picker from any webpage)</span>
+  <span class="ext-item"><span class="ext-dot" style="background:#4285F4;"></span>WhatFont (identify fonts on any site)</span>
 </div>
 
 <p class="tools-section-label">Finance &amp; Analytics</p>
@@ -268,7 +268,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Zoho Books</h4>
-      <p>Cost-effective accounting solution for small to mid-sized businesses — handles invoicing, tax compliance (including Pakistan FBR requirements), bank reconciliation, and financial reporting. Good Shopify integration means I can bridge e-commerce and accounting data for clients.</p>
+      <p>Cost-effective accounting solution for small to mid-sized businesses. Handles invoicing, tax compliance (including Pakistan FBR requirements), bank reconciliation, and financial reporting. Good Shopify integration means I can bridge e-commerce and accounting data for clients.</p>
       <div class="tool-tags"><span class="tool-tag">Accounting</span><span class="tool-tag">Tax</span><span class="tool-tag">SMB</span></div>
     </div>
   </div>
@@ -285,7 +285,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Notion</h4>
-      <p>Command center for everything — client project management, task tracking, SOPs for recurring Shopify tasks, study notes for CMA, and a running knowledge base. I track every active client store, deliverable, deadline, and invoice status in one workspace. Replaces 5 separate apps.</p>
+      <p>Command center for everything: client project management, task tracking, SOPs for recurring Shopify tasks, study notes for CMA, and a running knowledge base. I track every active client store, deliverable, deadline, and invoice status in one workspace. Replaces 5 separate apps.</p>
       <div class="tool-tags"><span class="tool-tag">Project Management</span><span class="tool-tag">Knowledge Base</span><span class="tool-tag">SOPs</span></div>
     </div>
   </div>
@@ -307,7 +307,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Google Workspace</h4>
-      <p>Professional email (Gmail), document collaboration (Docs/Sheets), and client-facing reports (Slides). Everything shared with clients goes through Google Workspace — clean, professional, and accessible from any device without compatibility issues.</p>
+      <p>Professional email (Gmail), document collaboration (Docs/Sheets), and client-facing reports (Slides). Everything shared with clients goes through Google Workspace: clean, professional, and accessible from any device without compatibility issues.</p>
       <div class="tool-tags"><span class="tool-tag">Email</span><span class="tool-tag">Documents</span><span class="tool-tag">Client Sharing</span></div>
     </div>
   </div>
@@ -318,7 +318,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Obsidian</h4>
-      <p>Local-first knowledge management for notes that don't belong in Notion — private thoughts, research rabbit holes, Liquid code snippets, and CMA study notes. The bi-directional linking shows connections between ideas I'd otherwise miss. Files stay on my machine, not a server.</p>
+      <p>Local-first knowledge management for notes that don't belong in Notion: private thoughts, research rabbit holes, Liquid code snippets, and CMA study notes. The bi-directional linking shows connections between ideas I'd otherwise miss. Files stay on my machine, not a server.</p>
       <div class="tool-tags"><span class="tool-tag">Note-taking</span><span class="tool-tag">Knowledge Graph</span><span class="tool-tag">Local-first</span></div>
     </div>
   </div>
@@ -335,7 +335,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Hugo</h4>
-      <p>Static site generator that builds this entire portfolio in under 2 seconds. No database, no PHP, no WordPress bloat — just HTML, CSS, and Markdown. Pages load fast everywhere because there's nothing dynamic to process. Hugo's template system (Go templates) is expressive enough to build anything complex while staying simple for content updates.</p>
+      <p>Static site generator that builds this entire portfolio in under 2 seconds. No database, no PHP, no WordPress bloat. Just HTML, CSS, and Markdown. Pages load fast everywhere because there's nothing dynamic to process. Hugo's template system (Go templates) is expressive enough to build anything complex while staying simple for content updates.</p>
       <div class="tool-tags"><span class="tool-tag">Static Sites</span><span class="tool-tag">Go Templates</span><span class="tool-tag">Fast Builds</span></div>
     </div>
   </div>
@@ -346,7 +346,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Vercel</h4>
-      <p>Deployment and hosting platform — connected directly to GitHub so every git push triggers an automatic rebuild and deploy. Global CDN means the site loads fast from Pakistan, UAE, or anywhere else clients browse from. Also hosts the serverless API function powering the AI chat on this site.</p>
+      <p>Deployment and hosting platform connected directly to GitHub, so every git push triggers an automatic rebuild and deploy. Global CDN means the site loads fast from Pakistan, UAE, or anywhere else clients browse from. Also hosts the serverless API function powering the AI chat on this site.</p>
       <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">CDN</span><span class="tool-tag">Serverless</span></div>
     </div>
   </div>
@@ -357,7 +357,7 @@ ShowShareButtons: false
     </div>
     <div class="tool-body">
       <h4>Google Gemini API</h4>
-      <p>Powers the AI chat assistant on this site — a custom-built serverless function using Gemini 2.5 Flash that answers visitor questions about my work, skills, and how to hire me. Built with streaming SSE responses, rate limiting, response caching, and a full system prompt covering all my projects and experience.</p>
+      <p>Powers the AI chat assistant on this site. A custom-built serverless function using Gemini 2.5 Flash that answers visitor questions about my work, skills, and how to hire me. Built with streaming SSE responses, rate limiting, response caching, and a full system prompt covering all my projects and experience.</p>
       <div class="tool-tags"><span class="tool-tag">AI</span><span class="tool-tag">Serverless API</span><span class="tool-tag">SSE Streaming</span></div>
     </div>
   </div>

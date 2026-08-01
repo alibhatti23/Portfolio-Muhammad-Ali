@@ -245,13 +245,14 @@ hideMeta: true
 </style>
 
 <div class="projects-header">
-  <p>26 Shopify stores + 4 Finance &amp; Analytics projects — Shopify Liquid, Excel, Power BI.</p>
+  <p>26 Shopify stores &middot; 4 Finance &amp; Analytics tools &middot; 1 Web App. Shopify Liquid, Excel, Power BI, React.</p>
 </div>
 
 <div class="type-bar">
   <button class="type-btn active" data-type="all">All Projects</button>
   <button class="type-btn" data-type="shopify">Shopify Stores</button>
   <button class="type-btn" data-type="finance">Finance &amp; Analytics</button>
+  <button class="type-btn" data-type="tools">Tools &amp; Apps</button>
 </div>
 
 <div class="filter-bar" id="categoryFilters">
@@ -758,7 +759,7 @@ hideMeta: true
     <div class="project-info">
       <h3>Budget &amp; Forecasting Model</h3>
       <span class="project-category">Finance &amp; Analytics</span>
-      <p class="finance-desc">Excel-based financial planning system with scenario analysis, budgeting, and revenue forecasting — built for real business use.</p>
+      <p class="finance-desc">Excel-based financial planning system with scenario analysis, budgeting, and revenue forecasting. Built for real business use.</p>
       <a class="project-visit" href="https://github.com/alibhatti23/Budget-Forcasting-Model" target="_blank" rel="noopener noreferrer">
         View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
@@ -800,10 +801,38 @@ hideMeta: true
     <div class="project-info">
       <h3>Small Business Bookkeeping System</h3>
       <span class="project-category">Finance &amp; Analytics</span>
-      <p class="finance-desc">Structured bookkeeping system for tracking income, expenses, cash flow, and P&amp;L statements — designed for small business owners.</p>
+      <p class="finance-desc">Structured bookkeeping system for tracking income, expenses, cash flow, and P&amp;L statements. Designed for small business owners.</p>
       <a class="project-visit" href="https://github.com/alibhatti23/Business-Bookkeeping-System" target="_blank" rel="noopener noreferrer">
         View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
+    </div>
+  </div>
+
+  <div class="project-card" data-type="tools" data-category="tools">
+    <div class="project-preview finance-preview" style="background: linear-gradient(135deg, #0d4a2e 0%, #1a8a52 100%);">
+      <div class="finance-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      </div>
+      <div class="finance-tools">
+        <span class="finance-badge">React</span>
+        <span class="finance-badge">TypeScript</span>
+        <span class="finance-badge">Tailwind</span>
+        <span class="finance-badge">PWA</span>
+        <span class="finance-badge">Vite</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3>Zakatly</h3>
+      <span class="project-category">Islamic Finance Tool</span>
+      <p class="finance-desc">Free, open-source Zakat calculator. Nisab setup (gold/silver), multi-currency, cash, investments, business assets, liabilities. Offline PWA with CI/CD and unit tests.</p>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;">
+        <a class="project-visit" href="https://zakatly-beta.vercel.app/" target="_blank" rel="noopener noreferrer">
+          Live App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <a class="project-visit project-visit-gh" href="https://github.com/alibhatti23/zakatly" target="_blank" rel="noopener noreferrer">
+          GitHub <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -867,7 +896,7 @@ hideMeta: true
       typeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentType = btn.dataset.type;
-      if (currentType === 'finance') {
+      if (currentType === 'finance' || currentType === 'tools') {
         categoryFilters.classList.add('hidden');
       } else {
         categoryFilters.classList.remove('hidden');

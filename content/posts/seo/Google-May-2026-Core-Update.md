@@ -139,7 +139,7 @@ Google made it crystal clear: their number one goal is to give users the best ex
 
 ## 2. AI Content? No Problem, If It’s Helpful
 
-Wondering if you can use AI to create content? Google’s John Mueller said it’s totally fine—as long as it’s valuable for your audience. But here’s the catch: if your AI-generated content is just fluff or trying to trick search engines, Google’s quality checkers might flag it as low-quality. This comes from their updated January 2025 guidelines. So, focus on creating stuff that actually helps your readers, and you’re good to go!
+Wondering if you can use AI to create content? Google’s John Mueller said it’s totally fine, as long as it’s valuable for your audience. But here’s the catch: if your AI-generated content is just fluff or trying to trick search engines, Google’s quality checkers might flag it as low-quality. This comes from their updated January 2025 guidelines. So, focus on creating stuff that actually helps your readers, and you’re good to go!
 ![google search central live](/posts/assets/SEO/img-4.webp)
 
 ## 3.  How AI Search and AI Overviews Function and Optimization Strategies
@@ -151,12 +151,12 @@ Regarding LLMs.txt, Mueller explained it may be relevant for systems unfamiliar 
 
 ## 4. Keeping an Eye on AI Overviews Is Tricky
 
-Want to know how AI Overviews are affecting your site? It’s not easy right now because Google Search Console doesn’t give much data on this. But don’t worry—Google’s working on better tracking tools, like updating data every hour, to help you see what’s going on. For now, just keep creating great content and stay tuned for updates!
+Want to know how AI Overviews are affecting your site? It’s not easy right now because Google Search Console doesn’t give much data on this. But don’t worry. Google’s working on better tracking tools, like updating data every hour, to help you see what’s going on. For now, just keep creating great content and stay tuned for updates!
 ![google search central live](/posts/assets/SEO/img-6.webp)
 
 ## 5. The Future of Search Is AI + Classic SEO
 
-AI is shaking things up, but Google says the basics of SEO—like making sure your site is crawlable and indexable—are still super important. Think of it like this: AI is the shiny new toy, but the old-school SEO tricks are the foundation that keeps everything running smoothly. So, keep up with both to stay ahead in the game.
+AI is shaking things up, but Google says the basics of SEO (like making sure your site is crawlable and indexable) are still super important. Think of it like this: AI is the shiny new toy, but the old-school SEO tricks are the foundation that keeps everything running smoothly. So, keep up with both to stay ahead in the game.
 ![google search central live](/posts/assets/SEO/img-7.webp)
 
 ## Why This Matters

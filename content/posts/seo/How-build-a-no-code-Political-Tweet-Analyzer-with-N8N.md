@@ -526,7 +526,7 @@ You’re all set! Let’s test the workflow.
 
 ## Conclusion and Next Steps:
 
-Congratulations! You’ve just built a powerful automation that turns social media chatter into actionable data. This is just the beginning—you can modify this workflow to analyze comments from YouTube, Reddit, or news articles.
+Congratulations! You’ve just built a powerful automation that turns social media chatter into actionable data. This is just the beginning. You can modify this workflow to analyze comments from YouTube, Reddit, or news articles.
 
 ### Need a Custom Automation?
 
