@@ -1,6 +1,6 @@
 ---
 title: "About Muhammad Ali Sajid"
-description: "Muhammad Ali Sajid is a Shopify Developer and founder of Creatify, specializing in custom theme development, Liquid, and e-commerce solutions. BS Accounting & Finance student at BZU Multan, pursuing CMA certification."
+description: "Muhammad Ali Sajid is a Shopify Developer and co-founder of Creatify, specializing in custom theme development, Liquid, and e-commerce solutions. BS Accounting & Finance student at BZU Multan, pursuing CMA certification."
 keywords: [Muhammad Ali Sajid, Creatify, Shopify Developer, Shopify Theme Development, Liquid, E-commerce, Freelance Shopify, Accountant, AFA, BZU Multan, Pakistan]
 showtoc: false
 searchHidden: true
@@ -89,7 +89,7 @@ lastmod: 2026-07-04
   </div>
   <div class="profile-card-info">
     <h1>Muhammad Ali Sajid</h1>
-    <p class="profile-role">Shopify Developer &amp; Founder of Creatify</p>
+    <p class="profile-role">Shopify Developer &amp; Co-Founder of Creatify</p>
     <div class="profile-badge">Available for new projects</div>
     <p class="profile-bio">I build custom Shopify storefronts for fashion, beauty, and DTC brands through <a href="https://www.creatify.site/" target="_blank">Creatify</a>, my freelance agency based in Multan, Pakistan. Also a BS Accounting &amp; Finance student at BZU and AFA holder through the CMA pathway.</p>
     <div class="profile-card-links">
@@ -116,12 +116,11 @@ lastmod: 2026-07-04
     <h3>Creatify</h3>
     <span class="work-period">2025 &ndash; Present</span>
   </div>
-  <p class="work-role">Founder &amp; Lead Shopify Developer &middot; Freelance Agency</p>
+  <p class="work-role">Co-Founder &amp; Lead Shopify Developer &middot; Freelance Agency</p>
   <p>Built and launched a Shopify-focused freelance agency from scratch while still a university student. Creatify delivers custom theme development, CRO-optimized landing pages, app integrations, and end-to-end store builds for clients across Pakistan, UAE, and the USA.</p>
   <ul class="work-bullets">
     <li>Built over 500+ production Shopify storefronts across fashion, beauty, skincare, tech, and more</li>
-    <li>Delivered stores for international brands: Maje (UAE), Rhode Skin (USA), Caliphe Clothing (Pakistan)</li>
-    <li>Services: Liquid development, Dawn theme customization, WhatsApp integrations, sticky CTAs, review systems, custom landing pages</li>
+    <li>Services: Liquid development, custom theme development, social media integrations, sticky CTAs, review systems, custom landing pages</li>
     <li>Managing client acquisition, project delivery, invoicing, and bookkeeping. Full business operation solo.</li>
   </ul>
 </div>
@@ -142,7 +141,7 @@ lastmod: 2026-07-04
     <p class="skill-group-title">Shopify Development</p>
     <div class="skill-tags">
       <span class="skill-tag">Shopify Liquid</span>
-      <span class="skill-tag">Dawn Theme</span>
+      <span class="skill-tag">Custom Theme</span>
       <span class="skill-tag">Section Schema</span>
       <span class="skill-tag">Metafields</span>
       <span class="skill-tag">AJAX Cart</span>
@@ -210,7 +209,7 @@ lastmod: 2026-07-04
   </div>
   <div class="edu-body">
     <h4>AFA (Affiliate Financial Accountant)</h4>
-    <p class="edu-meta">CMA Pathway &middot; 17 Papers Completed &middot; 2023 &ndash; Present</p>
+    <p class="edu-meta">CMA Pathway &middot; 17 of 18 Papers Completed &middot; 2023 &ndash; Present</p>
     <p>Started the CMA (Certified Management Accountant) pathway in 2023. Earned the AFA designation after completing 12 papers, a recognized professional accounting credential. Now at 17 papers and continuing toward full CMA certification. Covers financial planning, performance management, cost accounting, and professional ethics.</p>
   </div>
 </div>
